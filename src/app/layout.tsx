@@ -25,6 +25,7 @@ export default function RootLayout({
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "j9t4zrzjde");`}
         </Script>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-TDEJ6LR38N" />
         <Script id="google-analytics">
           {`
             window.dataLayer = window.dataLayer || [];
