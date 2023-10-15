@@ -1,3 +1,4 @@
+import Navigation from "@/components/Navigation";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -17,8 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <Script id="clarity" type="text/javascript">
+      <body suppressHydrationWarning={true} className={inter.className}>
+        <Navigation />
+        <main>{children}</main>
+        <Script id="clarity_tracker">
           {`(function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -35,8 +38,7 @@ export default function RootLayout({
             gtag('config', 'G-TDEJ6LR38N');
           `}
         </Script>
-      </head>
-      <body className={inter.className}>{children}</body>
+      </body>
     </html>
   );
 }
