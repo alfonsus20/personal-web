@@ -1,6 +1,6 @@
 const Navigation = () => {
   return (
-    <div className="flex justify-between items-center max-w-screen-xl mx-auto py-4">
+    <div className="flex justify-between items-center max-w-screen-xl mx-auto py-6">
       <div className="flex justify-between items-center gap-x-3">
         <div className="border-2 border-black rounded-full w-12 h-12 flex items-center justify-center font-semibold font-xl">
           A
