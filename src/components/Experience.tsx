@@ -10,7 +10,7 @@ const Experience = ({ image, className }: ExperienceProps) => {
   return (
     <div
       className={cn(
-        "flex gap-5 px-4 py-3 shadow-lg rounded-lg max-w-[26rem] items-center",
+        "flex gap-5 px-4 py-3 shadow-lg rounded-lg w-[44%] items-center relative",
         className
       )}
     >
@@ -36,8 +36,8 @@ const Experience = ({ image, className }: ExperienceProps) => {
             <span>Jakarta</span>
           </div>
           <div>
-            <span className="w-8 text- inline-block">📅</span>
-            <span>December 2021 - July 2022</span>
+            <span className="w-8 inline-block">📅</span>
+            <span>Dec 2021 - Jul 2022</span>
           </div>
         </div>
       </div>
