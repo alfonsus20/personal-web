@@ -1,5 +1,6 @@
 import Experience from "@/sections/Experience";
 import Hero from "@/sections/Hero";
+import Projects from "@/sections/Projects";
 import Skills from "@/sections/Skills";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <Hero />
       <Experience />
       <Skills />
+      <Projects/>
     </div>
   );
 };

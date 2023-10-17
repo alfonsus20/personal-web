@@ -13,7 +13,7 @@ const SkillRow = ({ title, skills }: SkillRowProps) => {
       <div className="flex flex-auto flex-wrap gap-3">
         {skills.map((skill, idx) => (
           <span
-            className="px-6 py-2 text-center border-gray-600 border-2 rounded-full cursor-pointer"
+            className="px-4 py-2 text-center border-gray-600 border-[1px] rounded-lg cursor-pointer text-sm font-medium"
             key={idx}
           >
             {skill}

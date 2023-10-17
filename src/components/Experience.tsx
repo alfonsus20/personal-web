@@ -1,5 +1,4 @@
-import cn from "@/utils/classnames";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 
 interface ExperienceProps {
   image: StaticImageData;
@@ -8,38 +7,32 @@ interface ExperienceProps {
 
 const Experience = ({ image, className }: ExperienceProps) => {
   return (
-    <div
-      className={cn(
-        "flex gap-5 px-4 py-3 shadow-lg rounded-lg w-[44%] items-center relative",
-        className
-      )}
-    >
-      <div className="w-28 h-28 flex items-center justify-center">
-        <Image
-          src={image}
-          width={200}
-          height={200}
-          alt="tiket"
-          placeholder="blur"
-          objectFit="contain"
-        />
+    <div className="flex">
+      <div className="flex w-32 flex-shrink-0">
+        <div className="flex justify-center flex-col items-center flex-shrink-0">
+          <div className="w-8 h-8 flex-shrink-0 rounded-full bg-white border-2 border-gray-900"></div>
+          <div className="w-0.5 h-full bg-gray-800"></div>
+        </div>
       </div>
-      <div>
-        <h3 className="font-semibold mb-2">Frontend Engineer Intern</h3>
-        <div className="text-sm space-y-0.5">
+      <div className="flex-auto pb-12">
+        <h3 className="font-bold mb-2 text-lg">Frontend Engineer Intern</h3>
+        <div className="text-sm space-y-0.5 mb-2 font-medium text-gray-700">
           <div>
             <span className="w-8 inline-block">💼</span>
-            <span>Tiket.com</span>
-          </div>
-          <div>
-            <span className="w-8 pl-1 inline-block">📍</span>
-            <span>Jakarta</span>
+            <span><span className="underline">Tiket.com</span> • Jakarta</span>
           </div>
           <div>
             <span className="w-8 inline-block">📅</span>
             <span>Dec 2021 - Jul 2022</span>
           </div>
         </div>
+        <p className="text-sm text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+          ratione laboriosam? Omnis minus quo ratione molestiae ea ut vel id,
+          doloremque sint maxime facilis sit optio, suscipit fugit! Autem, enim!
+          ratione laboriosam? Omnis minus quo ratione molestiae ea ut vel id,
+          doloremque sint maxime facilis sit optio, suscipit fugit! Autem, enim!
+        </p>
       </div>
     </div>
   );
