@@ -4,8 +4,8 @@ import { BsArrowUpRight } from "react-icons/bs";
 
 const Hero = () => {
   return (
-    <div className="flex items-center mx-auto max-w-screen-xl gap-x-8 h-[calc(100vh-6rem)] pb-10 px-6 2xl:px-0">
-      <div className="w-1/2">
+    <div className="flex flex-col md:flex-row items-center mx-auto max-w-screen-xl gap-8 h-[calc(100vh-6rem)] pt-8 md:pt-0 pb-10 px-6 2xl:px-0">
+      <div className="md:w-1/2">
         <div className="mb-7">
           <h2 className="font-semibold text-lg mb-4">
             Hi, I&apos;m Alfonsus Avianto 👋
@@ -31,7 +31,7 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-      <div className="w-1/2 bg-gray-600 h-full">
+      <div className="w-full md:w-1/2 bg-gray-600 h-full">
         <div className="h-full mx-auto"></div>
       </div>
     </div>

@@ -13,15 +13,13 @@ const Experience = () => {
     <section className="mx-auto max-w-[52rem] py-24 px-6 2xl:px-0">
       <Heading title="Experience" subtitle="Glympse of My Career Journey" />
       <div className="mx-auto my-16 max-w-4xl relative">
-        <div className="">
-          {experienceList.map((exp, idx) => (
-            <ExperienceCard
-              image={exp}
-              key={idx}
-              className={cn({ "ml-auto": idx % 2 !== 0 })}
-            />
-          ))}
-        </div>
+        {experienceList.map((exp, idx) => (
+          <ExperienceCard
+            image={exp}
+            key={idx}
+            className={cn({ "ml-auto": idx % 2 !== 0 })}
+          />
+        ))}
       </div>
     </section>
   );

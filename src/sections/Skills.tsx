@@ -8,9 +8,9 @@ interface SkillRowProps {
 
 const SkillRow = ({ title, skills }: SkillRowProps) => {
   return (
-    <section className="flex gap-x-20 px-6 2xl:px-0">
+    <section className="flex flex-col md:flex-row gap-x-20 gap-y-4 px-6 2xl:px-0">
       <div className="font-bold text-xl">{title}</div>
-      <div className="flex flex-auto flex-wrap gap-3">
+      <div className="flex flex-auto flex-wrap gap-3 ">
         {skills.map((skill, idx) => (
           <span
             className="px-4 py-2 text-center border-gray-600 border-[1px] rounded cursor-pointer text-sm font-medium"

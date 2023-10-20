@@ -9,7 +9,7 @@ interface ExperienceProps {
 const Experience = ({ image, className }: ExperienceProps) => {
   return (
     <div className="flex">
-      <div className="flex w-32 flex-shrink-0">
+      <div className="flex w-16 md:w-32 flex-shrink-0">
         <div className="flex justify-center flex-col items-center flex-shrink-0">
           <div className="w-8 h-8 flex-shrink-0 rounded-full bg-white border-2 border-gray-900"></div>
           <div className="w-0.5 h-full bg-gray-800"></div>

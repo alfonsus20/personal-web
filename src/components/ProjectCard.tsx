@@ -5,17 +5,17 @@ import { FaLink, FaGithub } from "react-icons/fa";
 
 const ProjectCard = () => {
   return (
-    <div className="flex w-full max-w-[800px] shadow-next rounded-lg px-6 py-8 overflow-hidden">
-      <div className="w-1/2 flex flex-col pr-6">
+    <div className="flex flex-col-reverse md:flex-row w-full max-w-[800px] shadow-next rounded-lg md:px-6 md:py-8 overflow-hidden">
+      <div className="md:w-1/2 flex flex-col pt-3 pb-8 md:py-0 md:pr-6 px-6 md:px-0">
         <h3 className="font-semibold text-xl mb-3">Edusex Website</h3>
-        <p className="line-clamp-5 mb-12 text-sm text-gray-700">
+        <p className="line-clamp-5 mb-4 md:mb-12 text-sm text-gray-700">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas animi
           dolorum dolores sint suscipit incidunt, hic officia vero ipsum culpa
           atque? Quam, non iste? Enim asperiores suscipit eum neque minima!
           atque? Quam, non iste? Enim asperiores suscipit eum neque minima!
           atque? Quam, non iste? Enim asperiores suscipit eum neque minima!
         </p>
-        <div className="mt-auto">
+        <div className="md:mt-auto">
           <div className="flex flex-wrap gap-2 mb-4">
             {generateArray(4, "React.js").map((row, idx) => (
               <span
@@ -32,8 +32,8 @@ const ProjectCard = () => {
           </div>
         </div>
       </div>
-      <div className="w-1/2 relative">
-        <div className="rounded-lg w-[500px] overflow-hidden absolute top-0 left-0">
+      <div className="md:w-1/2 relative">
+        <div className="rounded-lg md:w-[500px] overflow-hidden md:absolute top-0 left-0">
           <Image
             src={Edusex}
             width={1000}
