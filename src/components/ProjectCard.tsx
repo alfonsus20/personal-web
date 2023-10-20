@@ -1,6 +1,7 @@
 import Edusex from "@/assets/images/projects/edusex.png";
 import { generateArray } from "@/utils/array";
 import Image from "next/image";
+import { FaLink, FaGithub } from "react-icons/fa";
 
 const ProjectCard = () => {
   return (
@@ -14,15 +15,21 @@ const ProjectCard = () => {
           atque? Quam, non iste? Enim asperiores suscipit eum neque minima!
           atque? Quam, non iste? Enim asperiores suscipit eum neque minima!
         </p>
-        <div className="mt-auto flex flex-wrap gap-2">
-          {generateArray(5, "React.js").map((row, idx) => (
-            <span
-              key={idx}
-              className="text-sm border-[0.5px] px-2 py-1 rounded bg-gray-800 text-white"
-            >
-              React.js
-            </span>
-          ))}
+        <div className="mt-auto">
+          <div className="flex flex-wrap gap-2 mb-4">
+            {generateArray(4, "React.js").map((row, idx) => (
+              <span
+                key={idx}
+                className="text-sm border-[0.5px] px-2 py-1 rounded bg-gray-800 text-white"
+              >
+                React.js
+              </span>
+            ))}
+          </div>
+          <div className="flex gap-3 text-2xl">
+            <FaGithub />
+            <FaLink />
+          </div>
         </div>
       </div>
       <div className="w-1/2 relative">
