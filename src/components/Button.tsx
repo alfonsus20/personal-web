@@ -20,7 +20,7 @@ const Button = ({
     <button
       className={cn(
         {
-          "bg-gray-950 hover:opacity-90 text-white": variant === "primary",
+          "border-2 border-gray-950 bg-gray-950 hover:opacity-90 text-white": variant === "primary",
           "border-2 border-gray-950 hover:bg-gray-950 hover:text-white": variant === "secondary",
           rounded: rounded,
         },

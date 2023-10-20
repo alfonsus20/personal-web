@@ -5,7 +5,7 @@ import { FaLink, FaGithub } from "react-icons/fa";
 
 const ProjectCard = () => {
   return (
-    <div className="flex w-full max-w-[800px] shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-lg px-6 py-8 overflow-hidden">
+    <div className="flex w-full max-w-[800px] shadow-next rounded-lg px-6 py-8 overflow-hidden">
       <div className="w-1/2 flex flex-col pr-6">
         <h3 className="font-semibold text-xl mb-3">Edusex Website</h3>
         <p className="line-clamp-5 mb-12 text-sm text-gray-700">
