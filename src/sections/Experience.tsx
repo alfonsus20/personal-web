@@ -10,7 +10,7 @@ const experienceList = [TiketLogo, GarenaLogo, KalbeLogo, LingotalkLogo];
 
 const Experience = () => {
   return (
-    <section className="mx-auto max-w-[52rem] py-24">
+    <section className="mx-auto max-w-[52rem] py-24 px-6 2xl:px-0">
       <Heading title="Experience" subtitle="Glympse of My Career Journey" />
       <div className="mx-auto my-16 max-w-4xl relative">
         <div className="">

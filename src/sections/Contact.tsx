@@ -3,7 +3,7 @@ import { AiOutlineMail, AiOutlineFileText } from "react-icons/ai";
 
 const Contact = () => {
   return (
-    <section className="pb-20">
+    <section className="pb-20 px-6 2xl:px-0">
       <div className="flex items-center max-w-4xl mx-auto gap-4 rounded-lg px-8 py-8 shadow-lg">
         <div className="w-1/2">
           <div className="max-w-sm">

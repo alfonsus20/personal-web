@@ -4,7 +4,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 
 const Hero = () => {
   return (
-    <div className="flex items-center mx-auto max-w-screen-xl gap-x-8 h-[calc(100vh-6rem)] pb-10">
+    <div className="flex items-center mx-auto max-w-screen-xl gap-x-8 h-[calc(100vh-6rem)] pb-10 px-6 2xl:px-0">
       <div className="w-1/2">
         <div className="mb-7">
           <h2 className="font-semibold text-lg mb-4">

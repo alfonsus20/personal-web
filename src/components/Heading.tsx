@@ -9,7 +9,7 @@ interface HeadingProps {
 const Heading = ({ title, subtitle, position = "center" }: HeadingProps) => {
   return (
     <div
-      className={cn("mb-10", {
+      className={cn("mb-10 px-6 2xl:px-0", {
         "text-center": position === "center",
         "text-left": position === "left",
         "text-right": position === "right",

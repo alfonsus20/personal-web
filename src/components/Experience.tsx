@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { FcBriefcase, FcCalendar } from "react-icons/fc";
 
 interface ExperienceProps {
   image: StaticImageData;
@@ -17,12 +18,18 @@ const Experience = ({ image, className }: ExperienceProps) => {
       <div className="flex-auto pb-12">
         <h3 className="font-bold mb-2 text-lg">Frontend Engineer Intern</h3>
         <div className="text-sm space-y-0.5 mb-2 font-medium text-gray-700">
-          <div>
-            <span className="w-8 inline-block">💼</span>
-            <span><span className="underline">Tiket.com</span> • Jakarta</span>
+          <div className="flex items-center">
+            <span className="w-7 inline-block">
+              <FcBriefcase className='text-xl' />
+            </span>
+            <span>
+              <span className="underline">Tiket.com</span> • Jakarta
+            </span>
           </div>
-          <div>
-            <span className="w-8 inline-block">📅</span>
+          <div className="flex items-center">
+            <span className="w-7 inline-block">
+              <FcCalendar className='text-xl' />
+            </span>
             <span>Dec 2021 - Jul 2022</span>
           </div>
         </div>
