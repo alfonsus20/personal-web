@@ -1,23 +1,22 @@
-import GarenaLogo from "@/assets/images/work/garena.png";
-import KalbeLogo from "@/assets/images/work/kalbe.png";
-import LingotalkLogo from "@/assets/images/work/lingotalk.webp";
-import TiketLogo from "@/assets/images/work/tiket.webp";
 import ExperienceCard from "@/components/Experience";
 import Heading from "@/components/Heading";
-import cn from "@/utils/classnames";
-
-const experienceList = [TiketLogo, GarenaLogo, KalbeLogo, LingotalkLogo];
+import experienceList from "@/data/experience";
 
 const Experience = () => {
   return (
-    <section className="mx-auto max-w-[52rem] py-24 px-6 2xl:px-0">
+    <section className="mx-auto max-w-[52rem] py-12 md:py-20 px-6 2xl:px-0">
       <Heading title="Experience" subtitle="Glympse of My Career Journey" />
-      <div className="mx-auto my-16 max-w-4xl relative">
+      <div className="mx-auto max-w-4xl relative">
         {experienceList.map((exp, idx) => (
           <ExperienceCard
-            image={exp}
             key={idx}
-            className={cn({ "ml-auto": idx % 2 !== 0 })}
+            jobTitle={exp.jobTitle}
+            description={exp.description}
+            startDate={exp.startDate}
+            endDate={exp.endDate}
+            companyName={exp.company.name}
+            companyWebsite={exp.company.websiteURL}
+            location={exp.location}
           />
         ))}
       </div>

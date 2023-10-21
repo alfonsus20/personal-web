@@ -1,5 +1,5 @@
 import Heading from "@/components/Heading";
-import { generateArray } from "@/utils/array";
+import skillSet from "@/data/skills";
 
 interface SkillRowProps {
   skills: string[];
@@ -9,8 +9,8 @@ interface SkillRowProps {
 const SkillRow = ({ title, skills }: SkillRowProps) => {
   return (
     <section className="flex flex-col md:flex-row gap-x-20 gap-y-4 px-6 2xl:px-0">
-      <div className="font-bold text-xl">{title}</div>
-      <div className="flex flex-auto flex-wrap gap-3 ">
+      <div className="font-bold text-xl w-60 flex-shrink-0">{title}</div>
+      <div className="flex flex-auto flex-wrap gap-3">
         {skills.map((skill, idx) => (
           <span
             className="px-4 py-2 text-center border-gray-600 border-[1px] rounded cursor-pointer text-sm font-medium"
@@ -26,18 +26,15 @@ const SkillRow = ({ title, skills }: SkillRowProps) => {
 
 const Skills = () => {
   return (
-    <section className="mx-auto max-w-screen-xl pb-24">
+    <section className="mx-auto max-w-screen-xl pb-12 md:pb-20">
       <Heading
         title="Skills"
-        subtitle="Tech Stack I Currently Use"
+        subtitle="Tech Stack I Use"
         position="left"
       />
       <div className="space-y-8">
-        {generateArray(3, {
-          title: "Frontend",
-          skills: generateArray(12, "React.js"),
-        }).map((row, idx) => (
-          <SkillRow key={idx} {...row} />
+        {skillSet.map((skill, idx) => (
+          <SkillRow key={idx} {...skill} />
         ))}
       </div>
     </section>

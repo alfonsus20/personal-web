@@ -3,7 +3,7 @@ import ProjectCard from "@/components/ProjectCard";
 
 const Projects = () => {
   return (
-    <section className="mx-auto max-w-screen-xl pb-24 px-6 2xl:px-0">
+    <section className="mx-auto max-w-screen-xl pb-12 md:pb-20 px-6 2xl:px-0">
       <Heading
         title="Portfolio"
         subtitle="Selected Projects"

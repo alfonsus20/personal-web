@@ -39,8 +39,9 @@ const Hero = () => {
           alt="Alfonsus Avianto"
           width={1200}
           height={1600}
-          className="w-full lg:max-w-[400px] h-full aspect-[16/9] object-cover object-center md:aspect-[3/4]  md:ml-auto rounded"
+          className="w-full lg:max-w-[400px] h-full aspect-[16/10] object-cover object-center md:aspect-[3/4] md:ml-auto rounded"
           placeholder="blur"
+          priority
         />
       </div>
     </div>

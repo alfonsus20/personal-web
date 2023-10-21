@@ -1,45 +1,63 @@
-import { StaticImageData } from "next/image";
+import { ExperienceData } from "@/data/experience";
+import Link from "next/link";
 import { FcBriefcase, FcCalendar } from "react-icons/fc";
 
-interface ExperienceProps {
-  image: StaticImageData;
-  className?: string;
+interface ExperienceProps extends Omit<ExperienceData, "company"> {
+  companyName: string;
+  companyWebsite?: string;
 }
 
-const Experience = ({ image, className }: ExperienceProps) => {
+const Experience = ({
+  jobTitle,
+  companyName,
+  companyWebsite,
+  location,
+  description,
+  startDate,
+  endDate,
+}: ExperienceProps) => {
   return (
     <div className="flex">
-      <div className="flex w-16 md:w-32 flex-shrink-0">
+      <div className="flex w-16 md:w-28 flex-shrink-0">
         <div className="flex justify-center flex-col items-center flex-shrink-0">
-          <div className="w-8 h-8 flex-shrink-0 rounded-full bg-white border-2 border-gray-900"></div>
+          <div className="w-8 h-8 flex-shrink-0 rounded-full bg-white border-2 border-gray-900 grid place-items-center">
+            <div className="w-4 h-4 flex-shrink-0 rounded-full bg-gray-900"></div>
+          </div>
           <div className="w-0.5 h-full bg-gray-800"></div>
         </div>
       </div>
       <div className="flex-auto pb-12">
-        <h3 className="font-bold mb-2 text-lg">Frontend Engineer Intern</h3>
+        <h3 className="font-bold mb-2 text-lg">{jobTitle}</h3>
         <div className="text-sm space-y-0.5 mb-2 font-medium text-gray-700">
           <div className="flex items-center">
             <span className="w-7 inline-block">
-              <FcBriefcase className='text-xl' />
+              <FcBriefcase className="text-xl" />
             </span>
             <span>
-              <span className="underline">Tiket.com</span> • Jakarta
+              {companyWebsite ? (
+                <Link
+                  href={companyWebsite}
+                  target="_blank"
+                  className="underline"
+                >
+                  {companyName}
+                </Link>
+              ) : (
+                <span>{companyName}</span>
+              )}{" "}
+              • {location}
             </span>
           </div>
           <div className="flex items-center">
             <span className="w-7 inline-block">
-              <FcCalendar className='text-xl' />
+              <FcCalendar className="text-xl" />
             </span>
-            <span>Dec 2021 - Jul 2022</span>
+            <span>
+              {startDate} - {endDate || "present"}
+            </span>
           </div>
         </div>
-        <p className="text-sm text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
-          ratione laboriosam? Omnis minus quo ratione molestiae ea ut vel id,
-          doloremque sint maxime facilis sit optio, suscipit fugit! Autem, enim!
-          ratione laboriosam? Omnis minus quo ratione molestiae ea ut vel id,
-          doloremque sint maxime facilis sit optio, suscipit fugit! Autem, enim!
-        </p>
+        <div className="text-sm text-justify">{description}</div>
       </div>
     </div>
   );
