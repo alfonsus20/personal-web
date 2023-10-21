@@ -6,7 +6,10 @@ import Script from "next/script";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Alfonsus Avianto",

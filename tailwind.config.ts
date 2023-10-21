@@ -12,6 +12,9 @@ const config: Config = {
       boxShadow: {
         next: "0 8px 30px rgb(0,0,0,0.12)",
       },
+      screens: {
+        xs: "576px",
+      },
     },
   },
   plugins: [],

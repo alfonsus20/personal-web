@@ -1,16 +1,18 @@
 import Button from "@/components/Button";
+import Image from "next/image";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsArrowUpRight } from "react-icons/bs";
+import MyPhoto from "@/assets/images/photo.jpg";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center mx-auto max-w-screen-xl gap-8 h-[calc(100vh-6rem)] pt-8 md:pt-0 pb-10 px-6 2xl:px-0">
-      <div className="md:w-1/2">
+    <div className="flex flex-col-reverse md:flex-row items-center justify-end mx-auto max-w-screen-xl gap-6 min-h-[calc(100vh-6rem)] pt-4 md:pt-0 pb-10 px-6 2xl:px-0">
+      <div className="w-full md:w-7/12 lg:w-2/3">
         <div className="mb-7">
           <h2 className="font-semibold text-lg mb-4">
             Hi, I&apos;m Alfonsus Avianto 👋
           </h2>
-          <h1 className="font-bold text-5xl mb-5">Frontend Web Engineer</h1>
+          <h1 className="font-bold text-5xl mb-5">Frontend Engineer</h1>
           <p className="text-lg">
             A computer science graduate from the University of Brawijaya.
             I&apos;m a frontend engineer with a passion for crafting intuitive
@@ -31,8 +33,15 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-      <div className="w-full md:w-1/2 bg-gray-600 h-full">
-        <div className="h-full mx-auto"></div>
+      <div className="w-full md:w-5/12 lg:w-1/3">
+        <Image
+          src={MyPhoto}
+          alt="Alfonsus Avianto"
+          width={1200}
+          height={1600}
+          className="w-full lg:max-w-[400px] h-full aspect-[16/9] object-cover object-center md:aspect-[3/4]  md:ml-auto rounded"
+          placeholder="blur"
+        />
       </div>
     </div>
   );
