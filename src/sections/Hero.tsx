@@ -3,6 +3,7 @@ import Image from "next/image";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsArrowUpRight } from "react-icons/bs";
 import MyPhoto from "@/assets/images/photo.jpg";
+import { EMAIL_LINK } from "@/data/links";
 
 const Hero = () => {
   return (
@@ -22,12 +23,16 @@ const Hero = () => {
           </p>
         </div>
         <div className="flex gap-4">
-          <Button rightIcon={<AiOutlineMail className="text-xl" />}>
+          <Button
+            rightIcon={<AiOutlineMail className="text-xl" />}
+            href={EMAIL_LINK}
+          >
             Contact Me
           </Button>
           <Button
             variant="secondary"
             rightIcon={<BsArrowUpRight className="text-lg" />}
+            href="#portfolio"
           >
             My Portfolio
           </Button>

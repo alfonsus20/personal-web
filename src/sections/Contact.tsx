@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import { EMAIL_LINK, RESUME_LINK } from "@/data/links";
 import { AiOutlineMail, AiOutlineFileText } from "react-icons/ai";
 
 const Contact = () => {
@@ -18,15 +19,18 @@ const Contact = () => {
         </div>
         <div className="w-full sm:w-1/2 flex gap-2 items-center sm:justify-end flex-wrap">
           <Button
-            rightIcon={<AiOutlineMail className='text-lg' />}
+            rightIcon={<AiOutlineMail className="text-lg" />}
             className="flex-auto sm:max-w-[200px]"
+            href={EMAIL_LINK}
           >
             Email Me
           </Button>
           <Button
-            rightIcon={<AiOutlineFileText className='text-lg' />}
+            rightIcon={<AiOutlineFileText className="text-lg" />}
             className="flex-auto sm:max-w-[200px] gap-1.5"
             variant="secondary"
+            href={RESUME_LINK}
+            target="_blank"
           >
             View Resume
           </Button>
