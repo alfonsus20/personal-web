@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  @apply text-sm sm:text-base scroll-smooth scroll-p-[110px];
+  @apply text-sm sm:text-base scroll-smooth;
 }
 
 body {

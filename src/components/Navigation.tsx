@@ -1,11 +1,16 @@
 "use client";
 
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import menus from "@/data/menu";
 import cn from "@/utils/classnames";
 import { useScroll } from "framer-motion";
+import Link from "next/link";
 import { useState } from "react";
 
 const Navigation = () => {
   const [shadowed, setShadowed] = useState(false);
+
+  const { activeSection } = useActiveSectionContext();
 
   const { scrollY } = useScroll();
 
@@ -13,30 +18,89 @@ const Navigation = () => {
     setShadowed(val > 96);
   });
 
+  const [visible, setVisible] = useState(false);
+
+  const toggleVisibility = () => setVisible((prev) => !prev);
+
   return (
-    <nav
-      className={cn("sticky top-0 bg-white z-20", { "shadow-lg": shadowed })}
-    >
-      <div className="flex justify-between items-center max-w-screen-xl mx-auto py-6 px-6 2xl:px-0">
-        <div className="flex justify-between items-center gap-x-3">
-          <div className="border-2 border-black rounded-full w-12 h-12 flex items-center justify-center font-semibold text-xl">
-            A
+    <>
+      <nav
+        className={cn("sticky top-0 bg-white z-10", { "shadow-lg": shadowed })}
+      >
+        <div className="flex justify-between items-center max-w-screen-xl mx-auto py-6 px-4 sm:px-6 2xl:px-0">
+          <div className="flex justify-between items-center gap-x-3">
+            <div className="border-2 border-black rounded-full w-12 h-12 flex items-center justify-center font-semibold text-xl">
+              A
+            </div>
+            <div>
+              <p className="font-semibold">Alfonsus Avianto</p>
+              <p className="text-xs">Frontend Engineer</p>
+            </div>
           </div>
-          <div>
-            <p className="font-semibold">Alfonsus Avianto</p>
-            <p className="text-xs">Frontend Engineer</p>
+          <div className="hidden md:flex items-center gap-x-4">
+            {menus.map((link, index) => (
+              <Link
+                key={index}
+                href={link.href}
+                className={cn({ "font-semibold": activeSection === link.name })}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          <div
+            className="space-y-1 cursor-pointer md:hidden"
+            onClick={toggleVisibility}
+          >
+            <span className="w-6 h-[0.15rem] bg-black block"></span>
+            <span className="w-6 h-[0.15rem] bg-black block"></span>
+            <span className="w-6 h-[0.15rem] bg-black block"></span>
           </div>
         </div>
-        <div className="flex items-center gap-x-4">
-          <span>Menu</span>
-          <div className="space-y-1 cursor-pointer">
-            <span className="w-6 h-[0.15rem] bg-black block"></span>
-            <span className="w-6 h-[0.15rem] bg-black block"></span>
-            <span className="w-6 h-[0.15rem] bg-black block"></span>
+      </nav>
+      <div
+        className={cn(
+          "z-20 fixed bottom-0 left-0 right-0 bg-gray-900 flex flex-col text-gray-300 p-6 transition-all duration-300 ease-in-out",
+          { "top-0": visible, "bottom-full -top-full": !visible }
+        )}
+      >
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-x-3">
+            <div className="border-2 border-gray-300 rounded-full w-12 h-12 flex items-center justify-center font-semibold text-xl">
+              A
+            </div>
+            <div>
+              <p className="font-semibold">Alfonsus Avianto</p>
+              <p className="text-xs">Frontend Engineer</p>
+            </div>
           </div>
+          <div
+            className="relative cursor-pointer w-6 h-6"
+            onClick={toggleVisibility}
+          >
+            <span className="w-6 h-[0.15rem] bg-gray-300 block absolute top-1/2 -translate-y-1/2 right-0 left-0 bottom-0 rotate-45"></span>
+            <span className="w-6 h-[0.15rem] bg-gray-300 block absolute top-1/2 -translate-y-1/2 right-0 left-0 bottom-0 -rotate-45"></span>
+          </div>
+        </div>
+
+        <div className="flex-auto flex flex-col items-center justify-center gap-y-6">
+          {menus.map((link, index) => (
+            <Link
+              key={index}
+              href={link.href}
+              className={cn("text-3xl font-semibold", {
+                "text-white": activeSection === link.name,
+                "text-gray-500": activeSection !== link.name,
+              })}
+              onClick={toggleVisibility}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 

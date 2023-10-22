@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
 
 const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
@@ -24,10 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
-        <ScrollToTop />
+        <ActiveSectionContextProvider>
+          <Navigation />
+          <main>{children}</main>
+          <Footer />
+          <ScrollToTop />
+        </ActiveSectionContextProvider>
         <Script id="clarity_tracker">
           {`(function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

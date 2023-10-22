@@ -1,13 +1,22 @@
+"use client";
+
 import Button from "@/components/Button";
 import Image from "next/image";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsArrowUpRight } from "react-icons/bs";
 import MyPhoto from "@/assets/images/photo.jpg";
 import { EMAIL_LINK } from "@/data/links";
+import useSectionInView from "@/hooks/useSectionInView";
 
 const Hero = () => {
+  const { ref } = useSectionInView("Home");
+
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center justify-end mx-auto max-w-screen-xl gap-6 min-h-[calc(100vh-6rem)] pt-4 md:pt-0 pb-10 px-6 2xl:px-0">
+    <section
+      ref={ref}
+      id="hero"
+      className="flex flex-col-reverse md:flex-row items-center justify-end mx-auto max-w-screen-xl gap-6 min-h-[calc(100vh-6rem)] pt-4 md:pt-0 pb-10 px-4 sm:px-6 2xl:px-0 scroll-m-[100vh]"
+    >
       <div className="w-full md:w-7/12 lg:w-2/3">
         <div className="mb-7">
           <h2 className="font-semibold text-lg mb-4">
@@ -49,7 +58,7 @@ const Hero = () => {
           priority
         />
       </div>
-    </div>
+    </section>
   );
 };
 export default Hero;

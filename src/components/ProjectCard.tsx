@@ -1,9 +1,7 @@
-import Edusex from "@/assets/images/projects/edusex.png";
 import { ProjectData } from "@/data/projects";
-import { generateArray } from "@/utils/array";
 import Image from "next/image";
 import Link from "next/link";
-import { FaLink, FaGithub } from "react-icons/fa";
+import { FaGithub, FaLink } from "react-icons/fa";
 
 const ProjectCard = ({
   name,

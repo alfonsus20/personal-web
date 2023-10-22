@@ -17,7 +17,7 @@ const experienceList: ExperienceData[] = [
     location: "Surabaya, Indonesia",
     startDate: "Sep 2023",
     description: (
-      <p>
+      <>
         I&apos;m currently working on an exciting project to create a logistic
         and supply chain software using{" "}
         <span className="font-semibold">Vue.js</span>,{" "}
@@ -29,7 +29,7 @@ const experienceList: ExperienceData[] = [
         integrating Google Maps for location services. And, I make sure our code
         is top-notch by reviewing what our team and others contribute, making
         sure we stick to the best practices and project guidelines.
-      </p>
+      </>
     ),
   },
   {
@@ -42,7 +42,7 @@ const experienceList: ExperienceData[] = [
     startDate: "Apr 2023",
     endDate: "Aug 2023",
     description: (
-      <p>
+      <>
         I created a standardized <span className="font-semibold">Vue.js 3</span>{" "}
         <span className="font-semibold">TypeScript</span> boilerplate for use
         across multiple repositories, offering configurable Sentry for error
@@ -58,7 +58,7 @@ const experienceList: ExperienceData[] = [
         technologies to enhance project quality. Furthermore, I gathered user
         and stakeholder requirements and translated them into user interface
         designs using <span className="font-semibold">Figma</span>.
-      </p>
+      </>
     ),
   },
   {
@@ -71,7 +71,7 @@ const experienceList: ExperienceData[] = [
     startDate: "Jan 2023",
     endDate: "Apr 2023",
     description: (
-      <p>
+      <>
         I took charge of developing our Human Resource Management System and our
         company profile website using{" "}
         <span className="font-semibold">Next.js</span>,{" "}
@@ -81,7 +81,7 @@ const experienceList: ExperienceData[] = [
         delivery of these projects earned positive feedback from our
         stakeholders. I also improved security and usability by implementing
         single sign-on through our login portal.
-      </p>
+      </>
     ),
   },
   {
@@ -91,14 +91,14 @@ const experienceList: ExperienceData[] = [
     startDate: "Aug 2022",
     endDate: "Nov 2022",
     description: (
-      <p>
+      <>
         I transformed UI designs into responsive gamified websites using{" "}
         <span className="font-semibold">React.js</span>,{" "}
         <span className="font-semibold">Redux</span>, and{" "}
         <span className="font-semibold">SASS</span>. I also built and maintained
         five in-game event websites for Garena and used a Linux-based virtual
         machine along with Gitlab for collaboration.
-      </p>
+      </>
     ),
   },
   {
@@ -108,7 +108,7 @@ const experienceList: ExperienceData[] = [
     startDate: "Dec 2021",
     endDate: "Jul 2022",
     description: (
-      <p>
+      <>
         Utilized Scrum development methodologies and{" "}
         <span className="font-semibold">Jira</span> as a collaboration tool. I
         took charge of resolving critical bugs and implementing new features in
@@ -121,7 +121,7 @@ const experienceList: ExperienceData[] = [
         <span className="font-semibold">Enzyme</span>, resulting in a 12%
         increase in unit testing coverage for the flight dashboard repository,
         as reported by SonarQube.
-      </p>
+      </>
     ),
   },
   {
@@ -131,14 +131,14 @@ const experienceList: ExperienceData[] = [
     startDate: "Apr 2021",
     endDate: "Aug 2021",
     description: (
-      <p>
+      <>
         Built the IELTS/TOEFL test system and internal admin dashboard from the
         ground up, ensuring seamless integration and functionality across all
         components. Collaborated with product and design teams to deliver a
         modern and intuitive website, leveraging{" "}
         <span className="font-semibold">Svelte.js (Sapper)</span> to develop
         efficient and scalable web applications.
-      </p>
+      </>
     ),
   },
 ];

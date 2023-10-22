@@ -1,11 +1,17 @@
+"use client";
+
 import Heading from "@/components/Heading";
 import ProjectCard from "@/components/ProjectCard";
 import projectList from "@/data/projects";
+import useSectionInView from "@/hooks/useSectionInView";
 
 const Projects = () => {
+  const { ref } = useSectionInView("Portfolio");
+
   return (
     <section
-      className="mx-auto max-w-screen-xl pb-12 md:pb-20 px-6 2xl:px-0"
+      ref={ref}
+      className="mx-auto max-w-screen-xl pb-12 md:pb-20 px-4 sm:px-6 2xl:px-0 scroll-m-28"
       id="portfolio"
     >
       <Heading
