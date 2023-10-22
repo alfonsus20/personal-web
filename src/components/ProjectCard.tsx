@@ -36,7 +36,7 @@ const ProjectCard = ({
         </div>
       </div>
       <div className="md:w-1/2 relative">
-        <div className="rounded-lg md:w-[600px] overflow-hidden md:absolute top-0 left-0 rotate-0 group-hover:-rotate-3 group-hover:shadow-next ease-in duration-100">
+        <div className="md:rounded-lg md:w-[600px] overflow-hidden md:absolute top-0 left-0 rotate-0 md:group-hover:-rotate-3 md:group-hover:shadow-next ease-in duration-100">
           <Image
             src={image}
             width={1000}
