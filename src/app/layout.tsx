@@ -24,6 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link rel="icon" href="logo.svg" type="image/svg" />
       <body suppressHydrationWarning={true} className={inter.className}>
         <ActiveSectionContextProvider>
           <Navigation />
