@@ -1,6 +1,5 @@
-import { getAnimationProps } from "@/utils/animation";
 import cn from "@/utils/classnames";
-import { motion } from "framer-motion";
+import { MotionProps, motion } from "framer-motion";
 
 interface HeadingProps {
   title: string;
@@ -9,22 +8,22 @@ interface HeadingProps {
   id?: string;
 }
 
-const animationProps = getAnimationProps({
-  variants: {
-    initial: {
-      opacity: 0,
-      y: 40,
-    },
-    animate: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.2,
-      },
+const animationProps: MotionProps = {
+  initial: {
+    opacity: 0,
+    y: 40,
+  },
+  whileInView: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.2,
     },
   },
-  inView: true,
-});
+  viewport: {
+    once: true,
+  },
+};
 
 const Heading = ({
   title,

@@ -3,8 +3,7 @@
 import Heading from "@/components/Heading";
 import skillSet from "@/data/skills";
 import useSectionInView from "@/hooks/useSectionInView";
-import { getAnimationProps } from "@/utils/animation";
-import { MotionProps, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface SkillRowProps {
   skills: string[];
@@ -28,16 +27,14 @@ const item = {
 
 const SkillRow = ({ title, skills }: SkillRowProps) => {
   return (
-    <motion.section
-      // {...skillsRowProps}
-      className="flex flex-col md:flex-row gap-x-20 gap-y-4 px-4 sm:px-6 2xl:px-0"
-    >
+    <motion.section className="flex flex-col md:flex-row gap-x-20 gap-y-4 px-4 sm:px-6 2xl:px-0">
       <div className="font-bold text-xl w-60 flex-shrink-0">{title}</div>
       <motion.div
         className="flex flex-auto flex-wrap gap-3"
         variants={container}
         initial="hidden"
         whileInView="show"
+        viewport={{ once: true }}
       >
         {skills.map((skill, idx) => (
           <motion.span
