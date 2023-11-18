@@ -10,17 +10,17 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsArrowUpRight } from "react-icons/bs";
 
 const animationSteps = {
-  initial: "initial",
-  animate: "animate",
+  initial: "hidden",
+  animate: "shown",
 };
 
 const fadeInProps: AnimationProps = {
   variants: {
-    initial: {
+    hidden: {
       y: 100,
       opacity: 0,
     },
-    animate: (custom) => ({
+    shown: (custom) => ({
       y: 0,
       opacity: 1,
       transition: {
@@ -35,54 +35,20 @@ const fadeInProps: AnimationProps = {
 const zoomProps: AnimationProps = {
   ...animationSteps,
   variants: {
-    initial: {
+    hidden: {
       scale: 0.25,
       opacity: 0,
     },
-    animate: {
+    shown: (custom) => ({
       scale: 1,
       opacity: 1,
       transition: {
-        delay: 0.25 + 0.75,
-        duration: 0.5,
+        delay: 0.6 + custom * 0.5,
+        stiffness: 0,
       },
-    },
+    }),
   },
 };
-
-// const leftSection: AnimationProps = {
-//   ...animationSteps,
-//   variants: {
-//     initial: {
-//       opacity: 0,
-//       x: "-100%",
-//     },
-//     animate: {
-//       opacity: 1,
-//       x: "0%",
-//     },
-//   },
-//   transition: {
-//     stiffness: 0,
-//   },
-// };
-
-// const rightSection: AnimationProps = {
-//   ...animationSteps,
-//   variants: {
-//     initial: {
-//       opacity: 0,
-//       x: "100%",
-//     },
-//     animate: {
-//       opacity: 1,
-//       x: "0%",
-//     },
-//   },
-//   transition: {
-//     stiffness: 0,
-//   },
-// };
 
 const Hero = () => {
   const { ref } = useSectionInView("Home");
@@ -122,6 +88,7 @@ const Hero = () => {
             rightIcon={<AiOutlineMail className="text-xl" />}
             href={EMAIL_LINK}
             {...zoomProps}
+            custom={0}
           >
             Contact Me
           </Button>
@@ -129,13 +96,18 @@ const Hero = () => {
             variant="secondary"
             rightIcon={<BsArrowUpRight className="text-lg" />}
             href="#portfolio"
+            custom={1}
             {...zoomProps}
           >
             My Portfolio
           </Button>
         </div>
       </motion.div>
-      <motion.div {...zoomProps} className="w-full md:w-5/12 lg:w-1/3">
+      <motion.div
+        custom={2}
+        {...zoomProps}
+        className="w-full md:w-5/12 lg:w-1/3"
+      >
         <Image
           src={MyPhoto}
           alt="Alfonsus Avianto"

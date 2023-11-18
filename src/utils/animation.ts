@@ -6,7 +6,7 @@ export const getAnimationProps = (props: HTMLMotionProps<'div'> & { inView?: boo
     ...(props.inView ? { whileInView: 'animate' } : {
         animate: "animate",
     }),
-    viewport: {
-        once: true,
-    }
+    // viewport: {
+    //     once: true,
+    // }
 });

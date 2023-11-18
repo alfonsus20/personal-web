@@ -32,35 +32,35 @@ const experienceList: ExperienceData[] = [
       </>
     ),
   },
-  {
-    jobTitle: "IT Specialist",
-    company: {
-      name: "Bank Central Asia",
-      websiteURL: "https://www.bca.co.id/",
-    },
-    location: "Tangerang, Indonesia",
-    startDate: "Apr 2023",
-    endDate: "Aug 2023",
-    description: (
-      <>
-        I created a standardized <span className="font-semibold">Vue.js 3</span>{" "}
-        <span className="font-semibold">TypeScript</span> boilerplate for use
-        across multiple repositories, offering configurable Sentry for error
-        monitoring and Keycloak for secure authentication. Additionally, I
-        successfully transformed a single-piece SAP HRIS project&apos;s frontend
-        into a{" "}
-        <span className="font-semibold">microfrontend</span> architecture using{" "}
-        <span className="font-semibold">Vue.js</span> and{" "}
-        <span className="font-semibold">Qiankun (Single SPA)</span>, resulting
-        in one root app and three separate micro apps. This architectural shift
-        allowed for parallel development and deployment. I conducted research to
-        identify state-of-the-art frontend, backend, and end-to-end testing
-        technologies to enhance project quality. Furthermore, I gathered user
-        and stakeholder requirements and translated them into user interface
-        designs using <span className="font-semibold">Figma</span>.
-      </>
-    ),
-  },
+  // {
+  //   jobTitle: "IT Specialist",
+  //   company: {
+  //     name: "Bank Central Asia",
+  //     websiteURL: "https://www.bca.co.id/",
+  //   },
+  //   location: "Tangerang, Indonesia",
+  //   startDate: "Apr 2023",
+  //   endDate: "Aug 2023",
+  //   description: (
+  //     <>
+  //       I created a standardized <span className="font-semibold">Vue.js 3</span>{" "}
+  //       <span className="font-semibold">TypeScript</span> boilerplate for use
+  //       across multiple repositories, offering configurable Sentry for error
+  //       monitoring and Keycloak for secure authentication. Additionally, I
+  //       successfully transformed a single-piece SAP HRIS project&apos;s frontend
+  //       into a{" "}
+  //       <span className="font-semibold">microfrontend</span> architecture using{" "}
+  //       <span className="font-semibold">Vue.js</span> and{" "}
+  //       <span className="font-semibold">Qiankun (Single SPA)</span>, resulting
+  //       in one root app and three separate micro apps. This architectural shift
+  //       allowed for parallel development and deployment. I conducted research to
+  //       identify state-of-the-art frontend, backend, and end-to-end testing
+  //       technologies to enhance project quality. Furthermore, I gathered user
+  //       and stakeholder requirements and translated them into user interface
+  //       designs using <span className="font-semibold">Figma</span>.
+  //     </>
+  //   ),
+  // },
   {
     jobTitle: "Frontend Engineer Intern",
     company: {
