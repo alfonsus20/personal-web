@@ -3,6 +3,8 @@ import { StaticImageData } from "next/image";
 import Edusex from "@/assets/images/projects/edusex.png";
 import BCCDesignSystem from "@/assets/images/projects/bcc-design-system.png";
 import YadaYouth from "@/assets/images/projects/yadayouth.png";
+import TwiceButNice from "@/assets/images/projects/twice-but-nice.png";
+import Notesgram from "@/assets/images/projects/notesgram.png";
 
 export interface ProjectData {
   name: string;
@@ -26,6 +28,7 @@ const projectList: ProjectData[] = [
       "Websocket",
       "Nest.js",
       "Typescript",
+      "Vite"
     ],
     image: Edusex,
   },
@@ -39,7 +42,7 @@ const projectList: ProjectData[] = [
   },
   {
     name: "Yada Youth Website",
-    desc: "A non-profit organization which aims to help Indonesian childrens who are in need to get access to the education. I was the web development manager, led a team of 4 to build the company profile website with 100% unit testing coverage.",
+    desc: " non-profit organization which aims to help Indonesian childrens who are in need to get access to the education. I was the web development manager, led a team of 4 to build the company profile website with 100% unit testing coverage.",
     githubLink: "https://github.com/alfonsus20/yadayouth-nextjs-v2",
     technologies: [
       "Next.js",
@@ -50,6 +53,35 @@ const projectList: ProjectData[] = [
       "Django",
     ],
     image: YadaYouth,
+  },
+  {
+    name: "Notesgram",
+    desc: "Social media mobile app for sharing and buying handwritings notes. Successfully achieved the second place in INTENTION App Development Competition by Padjajaran University. I was responsible to create the backend system and the API documentation.",
+    githubLink: "https://github.com/alfonsus20/notesgram-backend",
+    technologies: [
+      "Nest.js",
+      "OY Payment Gateway",
+      "Supabase",
+      "Firebase",
+      "Typescript",
+      "Postman Doc",
+    ],
+    image: Notesgram,
+  },
+  {
+    name: "Twice But Nice",
+    desc: "An e-commerce site for selling thrifted products, consists of the customer facing and admin panel sides. All the end-to-end processes are covered, starting from viewing products, add to cart and favorites, checkout, payment (using Midtrans) and email billing.",
+    githubLink: "https://github.com/alfonsus20/twice-but-nice",
+    technologies: [
+      "Laravel",
+      "PHP",
+      "Bootstrap",
+      "JQuery",
+      "MySQL",
+      "Midtrans",
+      "AJAX",
+    ],
+    image: TwiceButNice,
   },
 ];
 
