@@ -28,7 +28,7 @@ const Navigation = () => {
         className={cn("sticky top-0 bg-white z-10", { "shadow-lg": shadowed })}
       >
         <div className="flex justify-between items-center max-w-screen-xl mx-auto py-6 px-4 sm:px-6 2xl:px-0">
-          <div className="flex justify-between items-center gap-x-3">
+          <Link href="/" className="flex justify-between items-center gap-x-3">
             <div className="border-2 border-black rounded-full w-12 h-12 flex items-center justify-center font-semibold text-xl">
               A
             </div>
@@ -36,7 +36,7 @@ const Navigation = () => {
               <p className="font-semibold">Alfonsus Avianto</p>
               <p className="text-xs">Frontend Engineer</p>
             </div>
-          </div>
+          </Link>
           <div className="hidden md:flex items-center gap-x-4">
             {menus.map((link, index) => (
               <Link

@@ -1,8 +1,9 @@
 import cn from "@/utils/classnames";
+import { HTMLMotionProps, motion } from "framer-motion";
 import Link from "next/link";
 import React, { useMemo } from "react";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends HTMLMotionProps<"button"> {
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   variant?: "primary" | "secondary";
@@ -48,15 +49,17 @@ const Button = ({
 
   if (href)
     return (
-      <Link href={href} target={target} className={classAttr}>
-        {content}
-      </Link>
+      <motion.button {...props}>
+        <Link href={href} passHref target={target} className={classAttr}>
+          {content}
+        </Link>
+      </motion.button>
     );
 
   return (
-    <button {...props} className={classAttr}>
+    <motion.button {...props} className={classAttr}>
       {content}
-    </button>
+    </motion.button>
   );
 };
 
