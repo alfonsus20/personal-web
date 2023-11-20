@@ -3,26 +3,53 @@
 import Heading from "@/components/Heading";
 import skillSet from "@/data/skills";
 import useSectionInView from "@/hooks/useSectionInView";
+import { MotionProps, motion } from "framer-motion";
 
 interface SkillRowProps {
   skills: string[];
   title: string;
 }
 
+const skillRowAnim: MotionProps = {
+  initial: "hidden",
+  whileInView: "visible",
+  variants: {
+    visible: {
+      transition: {
+        staggerChildren: 0.075,
+      },
+    },
+  },
+};
+
+const skillItemAnim: MotionProps = {
+  variants: {
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+  },
+};
+
 const SkillRow = ({ title, skills }: SkillRowProps) => {
   return (
     <section className="flex flex-col md:flex-row gap-x-20 gap-y-4 px-4 sm:px-6 2xl:px-0">
       <div className="font-bold text-xl w-60 flex-shrink-0">{title}</div>
-      <div className="flex flex-auto flex-wrap gap-3">
+      <motion.div {...skillRowAnim} className="flex flex-auto flex-wrap gap-3">
         {skills.map((skill, idx) => (
-          <span
+          <motion.span
+            {...skillItemAnim}
             className="px-4 py-2 text-center border-gray-600 border-[1px] rounded cursor-pointer text-sm font-medium"
             key={idx}
           >
             {skill}
-          </span>
+          </motion.span>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

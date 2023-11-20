@@ -3,9 +3,47 @@
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 import menus from "@/data/menu";
 import cn from "@/utils/classnames";
-import { useScroll } from "framer-motion";
+import { MotionProps, useScroll, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+
+const mobileNavAnim: MotionProps = {
+  variants: {
+    visible: {
+      top: 0,
+      bottom: 0,
+      transition: {},
+    },
+    hidden: {
+      bottom: "100%",
+      top: "-100%",
+    },
+  },
+};
+
+const menuItemAnim: MotionProps = {
+  variants: {
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+  },
+};
+
+const menuItemWrapper: MotionProps = {
+  variants: {
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.75,
+      },
+    },
+  },
+};
 
 const Navigation = () => {
   const [shadowed, setShadowed] = useState(false);
@@ -59,11 +97,15 @@ const Navigation = () => {
           </div>
         </div>
       </nav>
-      <div
+
+      {/* Mobile Navbar */}
+      <motion.div
         className={cn(
-          "z-20 fixed bottom-0 left-0 right-0 bg-gray-900 flex flex-col text-gray-300 p-6 transition-all duration-300 ease-in-out",
-          { "top-0": visible, "bottom-full -top-full": !visible }
+          "z-20 fixed left-0 right-0 bg-gray-900 flex flex-col text-gray-300 p-6 transition-all duration-300 ease-in-out"
         )}
+        {...mobileNavAnim}
+        animate={visible ? "visible" : "hidden"}
+        initial="hidden"
       >
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-x-3">
@@ -84,22 +126,28 @@ const Navigation = () => {
           </div>
         </div>
 
-        <div className="flex-auto flex flex-col items-center justify-center gap-y-6">
+        <motion.div
+          {...menuItemWrapper}
+          animate={visible ? "visible" : "hidden"}
+          className="flex-auto flex flex-col items-center justify-center gap-y-6"
+        >
           {menus.map((link, index) => (
-            <Link
-              key={index}
-              href={link.href}
-              className={cn("text-3xl font-semibold", {
-                "text-white": activeSection === link.name,
-                "text-gray-500": activeSection !== link.name,
-              })}
-              onClick={toggleVisibility}
-            >
-              {link.name}
-            </Link>
+            <motion.span {...menuItemAnim} key={index}>
+              <Link
+                key={index}
+                href={link.href}
+                className={cn("text-3xl font-semibold", {
+                  "text-white": activeSection === link.name,
+                  "text-gray-500": activeSection !== link.name,
+                })}
+                onClick={toggleVisibility}
+              >
+                {link.name}
+              </Link>
+            </motion.span>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </>
   );
 };

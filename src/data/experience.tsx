@@ -67,7 +67,7 @@ const experienceList: ExperienceData[] = [
       name: "Kalbe Group",
       websiteURL: "https://cakraradhamustika.com",
     },
-    location: "Surabaya, Indonesia",
+    location: "Jakarta, Indonesia",
     startDate: "Jan 2023",
     endDate: "Apr 2023",
     description: (

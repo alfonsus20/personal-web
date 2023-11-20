@@ -18,7 +18,7 @@ const Contact = () => {
             </h2>
             <p>
               Wanna a further discuss and more information about my competency?
-              You can reach me out via email and also see my resume
+              You can reach me out via email and also view my resume
             </p>
           </div>
         </div>

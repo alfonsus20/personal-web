@@ -23,7 +23,7 @@ const projectList: ProjectData[] = [
     hostingLink: "http://edusex.vercel.app",
     technologies: [
       "React.js",
-      "Tailwind CSS",
+      "Chakra UI",
       "PWA",
       "Websocket",
       "Nest.js",
