@@ -5,6 +5,8 @@ import BCCDesignSystem from "@/assets/images/projects/bcc-design-system.png";
 import YadaYouth from "@/assets/images/projects/yadayouth.png";
 import TwiceButNice from "@/assets/images/projects/twice-but-nice.png";
 import Notesgram from "@/assets/images/projects/notesgram.png";
+import Tedx from '@/assets/images/projects/tedx.png';
+import Helto from '@/assets/images/projects/helto.png';
 
 export interface ProjectData {
   name: string;
@@ -41,8 +43,29 @@ const projectList: ProjectData[] = [
     image: BCCDesignSystem,
   },
   {
+    name: 'Helto',
+    hostingLink: 'https://helto.vercel.app',
+    githubLink: 'https://github.com/alfonsus20/helto-frontend',
+    technologies: ['React', 'Tailwind CSS', 'Typescript'],
+    desc: `An educational website for potato farmers. 
+    I was in charge of building the frontend using React and the ML model for pattern recognition using Python and CNN algorithm. 
+    Successfully achieved the first place in IOFTI Web Dev Competition by Tarumanegara University.`,
+    image: Helto
+  },
+  {
+    name: 'TedxUniversitasBrawijaya 2022',
+    githubLink: 'https://github.com/alfonsus20/tedxub-2022',
+    desc: `I developed the frontend and the backend system for the official website, 
+    speaker registration, audience registration, admin dashboard and ticketing system. 
+    The main website received over 1000 visits. Deployed on GCP and CPanel by utilizing GitHub Actions.`,
+    technologies: ['React', 'Framer Motion', 'Vite', 'Tailwind', 'Github Actions', 'GCP', 'OY Payment Gateway'],
+    image: Tedx,
+    hostingLink: 'https://tedxub-2022.vercel.app'
+  },
+  {
     name: "Yada Youth Website",
-    desc: " non-profit organization which aims to help Indonesian childrens who are in need to get access to the education. I was the web development manager, led a team of 4 to build the company profile website with 100% unit testing coverage.",
+    desc: `A non-profit organization which aims to help Indonesian childrens who are in need to get access to the education. 
+    I was the web development manager, led a team of 4 to build the company profile website with 100% unit testing coverage.`,
     githubLink: "https://github.com/alfonsus20/yadayouth-nextjs-v2",
     technologies: [
       "Next.js",
@@ -56,7 +79,9 @@ const projectList: ProjectData[] = [
   },
   {
     name: "Notesgram",
-    desc: "Social media mobile app for sharing and buying handwritings notes. Successfully achieved the second place in INTENTION App Development Competition by Padjajaran University. I was responsible to create the backend system and the API documentation.",
+    desc: `Social media mobile app for sharing and buying handwritings notes. 
+    Successfully achieved the second place in INTENTION App Development Competition by Padjajaran University. 
+    I was responsible to create the backend system and the API documentation.`,
     githubLink: "https://github.com/alfonsus20/notesgram-backend",
     technologies: [
       "Nest.js",
@@ -70,7 +95,10 @@ const projectList: ProjectData[] = [
   },
   {
     name: "Twice But Nice",
-    desc: "An e-commerce site for selling thrifted products, consists of the customer facing and admin panel sides. All the end-to-end processes are covered, starting from viewing products, add to cart and favorites, checkout, payment (using Midtrans) and email billing.",
+    desc: `An e-commerce site for selling thrifted products, 
+    consists of the customer facing and admin panel sides. 
+    All the end-to-end processes are covered, starting from viewing products, add to cart and favorites, 
+    checkout, payment (using Midtrans) and email billing.`,
     githubLink: "https://github.com/alfonsus20/twice-but-nice",
     technologies: [
       "Laravel",
@@ -83,6 +111,7 @@ const projectList: ProjectData[] = [
     ],
     image: TwiceButNice,
   },
+
 ];
 
 export default projectList;

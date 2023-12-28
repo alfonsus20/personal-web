@@ -1,7 +1,7 @@
 const skillSet = [
   {
     title: "Programming Language",
-    skills: ["Javascript", "Typescript", "Java"],
+    skills: ["Javascript", "Typescript", "Java", "PHP"],
   },
   {
     title: "Frontend",
@@ -32,6 +32,7 @@ const skillSet = [
       "Nest.js",
       "SQL",
       "Google Cloud Platform",
+      "Laravel"
     ],
   },
   {
