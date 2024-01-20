@@ -31,7 +31,7 @@ const Hero = () => {
             scalable web applications.
           </p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-x-4">
           <Button
             rightIcon={<AiOutlineMail className="text-xl" />}
             href={EMAIL_LINK}

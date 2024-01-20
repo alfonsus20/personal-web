@@ -83,7 +83,7 @@ const Experience = ({
           </div>
           <div className="text-sm text-justify">{description}</div>
         </div>
-        <div className="flex gap-3">
+        <div className="flex gap-x-3 gap-y-2 flex-wrap">
           <Button
             href={`/experience/${id}`}
             size="sm"
