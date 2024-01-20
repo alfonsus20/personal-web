@@ -20,6 +20,9 @@ const skillRowAnim: MotionProps = {
       },
     },
   },
+  viewport: {
+    once: true,
+  },
 };
 
 const skillItemAnim: MotionProps = {
@@ -32,6 +35,9 @@ const skillItemAnim: MotionProps = {
       opacity: 1,
       x: 0,
     },
+  },
+  viewport: {
+    once: true,
   },
 };
 
@@ -60,7 +66,7 @@ const Skills = () => {
   return (
     <section
       ref={ref}
-      className="mx-auto max-w-screen-xl pb-12 md:pb-20 scroll-m-28"
+      className="mx-auto max-w-screen-xl pb-12 md:pb-20"
       id="skills"
     >
       <Heading title="Skills" subtitle="Tech Stack I Use" position="left" />

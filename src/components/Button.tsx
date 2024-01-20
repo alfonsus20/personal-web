@@ -1,6 +1,7 @@
 import cn from "@/utils/classnames";
 import Link from "next/link";
 import React, { useMemo } from "react";
+import { CommonSize } from "../types/design";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   leftIcon?: React.ReactNode;
@@ -9,6 +10,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   rounded?: boolean;
   href?: string;
   target?: string;
+  size?: CommonSize;
 }
 
 const Button = ({
@@ -20,6 +22,7 @@ const Button = ({
   className,
   href,
   target,
+  size = "md",
   ...props
 }: ButtonProps) => {
   const classAttr = useMemo(
@@ -32,10 +35,15 @@ const Button = ({
             variant === "secondary",
           rounded: rounded,
         },
-        "px-5 py-2.5 flex items-center gap-2 font-medium justify-center",
+        "flex items-center gap-2 font-medium justify-center w-fit",
+        {
+          "px-3 py-1.5 text-sm": size === "sm",
+          "px-5 py-2.5 text-md": size === "md",
+          "px-6 py-3 text-lg": size === "lg",
+        },
         className
       ),
-    [className, variant, rounded]
+    [className, variant, rounded, size]
   );
 
   const content = (

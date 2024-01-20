@@ -1,19 +1,69 @@
+import McEasyLogo from "@/assets/images/experience/mceasy/logo.webp";
+import FleetAvailability from "@/assets/images/experience/mceasy/projects/fleet-availability.png";
+import FleetTask1 from "@/assets/images/experience/mceasy/projects/fleet-task.png";
+import FleetTask2 from "@/assets/images/experience/mceasy/projects/fleet-task-2.png";
+import Dashboard from "@/assets/images/experience/mceasy/projects/dashboard.png";
+import OrderManagement from "@/assets/images/experience/mceasy/projects/delivery-order.png";
+import OrderManagement2 from "@/assets/images/experience/mceasy/projects/delivery-order-2.png";
+import Liveview from "@/assets/images/experience/mceasy/projects/liveview.png";
+
+import GarenaLogo from "@/assets/images/experience/garena/logo.png";
+import GambitChest from "@/assets/images/experience/garena/projects/gambit-chest.png";
+import LuckySpin from "@/assets/images/experience/garena/projects/lucky-spin.png";
+
+import BcaLogo from "@/assets/images/experience/bca/logo.png";
+
+import TiketLogo from "@/assets/images/experience/tiket/logo.png";
+import Carpool from "@/assets/images/experience/tiket/projects/car-pool.png";
+import Carpool2 from "@/assets/images/experience/tiket/projects/car-pool-2.png";
+import Carpool3 from "@/assets/images/experience/tiket/projects/car-pool-3.png";
+import Carpool4 from "@/assets/images/experience/tiket/projects/car-pool-4.png";
+import Carpool5 from "@/assets/images/experience/tiket/projects/car-pool-5.png";
+import Carpool6 from "@/assets/images/experience/tiket/projects/car-pool-6.png";
+import CarRentalSeo from "@/assets/images/experience/tiket/projects/car-rental-seo.png";
+import CarRentalDashboard from "@/assets/images/experience/tiket/projects/car-rental-dashboard.png";
+import FlightDashboard from "@/assets/images/experience/tiket/projects/flight-dashboard.png";
+
+import KalbeLogo from "@/assets/images/experience/kalbe/logo.png";
+
+import LingotalkLogo from "@/assets/images/experience/lingotalk/logo.webp";
+
+import { StaticImageData } from "next/image";
+
+interface CompanyData {
+  name: string;
+  websiteURL?: string;
+  logo: StaticImageData;
+  about: string;
+}
+
+interface ProjectData {
+  name: string;
+  screenshots: StaticImageData[];
+}
+
 export interface ExperienceData {
   jobTitle: string;
-  company: {
-    name: string;
-    websiteURL?: string;
-  };
+  company: CompanyData;
   location: string;
   startDate: string;
   endDate?: string;
   description: React.ReactNode;
+  id: string;
+  projects?: ProjectData[];
+  memories?: StaticImageData[];
 }
 
 const experienceList: ExperienceData[] = [
   {
-    jobTitle: "Frontend Engineer (Contract)",
-    company: { name: "McEasy", websiteURL: "https://mceasy.com" },
+    jobTitle: "Frontend Engineer",
+    company: {
+      name: "McEasy",
+      websiteURL: "https://mceasy.com",
+      logo: McEasyLogo,
+      about:
+        "McEasy is a technology innovation company specializing in providing integrated digital solutions for transportation and supply chain management. As a pioneer in developing platforms connected to the Internet of Things (IoT) and telematics, McEasy enhances operational efficiency across various business sectors. Through the development of the Fleet Transportation Management System (FTMS), McEasy improves efficiency, productivity, safety, and visibility in the transportation sector's operations in Indonesia.",
+    },
     location: "Surabaya, Indonesia",
     startDate: "Sep 2023",
     description: (
@@ -31,12 +81,58 @@ const experienceList: ExperienceData[] = [
         sure we stick to the best practices and project guidelines.
       </>
     ),
+    id: "mceasy",
+    projects: [
+      { name: "Dashboard", screenshots: [Dashboard] },
+      { name: "Fleet Availability", screenshots: [FleetAvailability] },
+      { name: "Liveview Monitoring", screenshots: [Liveview] },
+      { name: "Fleet Task Management", screenshots: [FleetTask1, FleetTask2] },
+      {
+        name: "Order Management",
+        screenshots: [OrderManagement, OrderManagement2],
+      },
+    ],
+  },
+  {
+    jobTitle: "IT Specialist",
+    company: {
+      name: "Bank Central Asia",
+      websiteURL: "https://www.bca.co.id/",
+      logo: BcaLogo,
+      about:
+        "Bank Central Asia (BCA) is one of Indonesia's largest private banks, headquartered in Jakarta. Established in 1957, BCA has been a significant player in the country's banking sector, offering a wide range of financial services, including consumer and commercial banking, wealth management, and electronic banking solutions.",
+    },
+    location: "Tangerang, Indonesia",
+    startDate: "Apr 2023",
+    endDate: "Aug 2023",
+    description: (
+      <>
+        I created a standardized <span className="font-semibold">Vue.js 3</span>{" "}
+        <span className="font-semibold">TypeScript</span> boilerplate for use
+        across multiple repositories, offering configurable Sentry for error
+        monitoring and Keycloak for secure authentication. Additionally, I
+        successfully transformed a single-piece SAP HRIS project&apos;s frontend
+        into a <span className="font-semibold">microfrontend</span> architecture
+        using <span className="font-semibold">Vue.js</span> and{" "}
+        <span className="font-semibold">Qiankun (Single SPA)</span>, resulting
+        in one root app and three separate micro apps. This architectural shift
+        allowed for parallel development and deployment. I conducted research to
+        identify state-of-the-art frontend, backend, and end-to-end testing
+        technologies to enhance project quality. Furthermore, I gathered user
+        and stakeholder requirements and translated them into user interface
+        designs using <span className="font-semibold">Figma</span>.
+      </>
+    ),
+    id: "bca",
   },
   {
     jobTitle: "Frontend Engineer Intern",
     company: {
       name: "Kalbe Group",
       websiteURL: "https://cakraradhamustika.com",
+      logo: KalbeLogo,
+      about:
+        "PT Cakra Radha Mustika is a Total Business Solution-based company that provides services by helping other companies run projects or campaigns from the initial process to the final step. These services start from building the foundation of a company's brand to reach a bigger audience (brand awareness), effectively creating or changing user behavior (lead generation), running acquisition programs to conducting customer retention.",
     },
     location: "Jakarta, Indonesia",
     startDate: "Jan 2023",
@@ -54,10 +150,17 @@ const experienceList: ExperienceData[] = [
         single sign-on through our login portal.
       </>
     ),
+    id: "kalbe",
   },
   {
     jobTitle: "Frontend Engineer Intern",
-    company: { name: "Garena", websiteURL: "https://www.garena.com" },
+    company: {
+      name: "Garena",
+      websiteURL: "https://www.garena.com",
+      logo: GarenaLogo,
+      about:
+        "Garena is a Singaporean game developer and publisher of free online games. It is the digital entertainment arm of parent company Sea Ltd, which was formerly named Garena.",
+    },
     location: "Jakarta, Indonesia",
     startDate: "Aug 2022",
     endDate: "Nov 2022",
@@ -71,10 +174,21 @@ const experienceList: ExperienceData[] = [
         machine along with Gitlab for collaboration.
       </>
     ),
+    id: "garena",
+    projects: [
+      { name: "Lucky Spin", screenshots: [LuckySpin] },
+      { name: "Gambit Chest", screenshots: [GambitChest] },
+    ],
   },
   {
     jobTitle: "Frontend Engineer Intern",
-    company: { name: "Tiket.com", websiteURL: "https://www.tiket.com/" },
+    company: {
+      name: "Tiket.com",
+      websiteURL: "https://www.tiket.com/",
+      logo: TiketLogo,
+      about:
+        "Tiket.com is a prominent Indonesian online travel and entertainment platform headquartered in Jakarta. Specializing in flight and hotel bookings, holiday packages, and event ticketing, Tiket.com is recognized for its commitment to digital innovation and enhancing user experiences in the dynamic online travel sector.",
+    },
     location: "Jakarta, Indonesia",
     startDate: "Dec 2021",
     endDate: "Jul 2022",
@@ -94,10 +208,40 @@ const experienceList: ExperienceData[] = [
         as reported by SonarQube.
       </>
     ),
+    id: "tiket",
+    projects: [
+      {
+        name: "Car Pool Management (Car Rental)",
+        screenshots: [
+          Carpool4,
+          Carpool,
+          Carpool3,
+          Carpool5,
+          Carpool6,
+        ],
+      },
+      {
+        name: "Car Rental SEO Dashboard",
+        screenshots: [CarRentalSeo],
+      },
+      {
+        name: "Car Rental Dashboard",
+        screenshots: [CarRentalDashboard],
+      },
+      {
+        name: "Flight Dashboard",
+        screenshots: [FlightDashboard],
+      },
+    ],
   },
   {
     jobTitle: "Frontend Engineer Intern",
-    company: { name: "Lingotalk" },
+    company: {
+      name: "Lingotalk",
+      logo: LingotalkLogo,
+      about:
+        "Established in 2017, LingoTalk provides efficient language learning solutions, offering courses in 10 languages on web and mobile platforms. With recent investor support and participation in programs like Alibaba's accelerator, LingoTalk invites emerging talents to join its mission of transforming language education in Indonesia.",
+    },
     location: "Jakarta, Indonesia",
     startDate: "Apr 2021",
     endDate: "Aug 2021",
@@ -111,6 +255,7 @@ const experienceList: ExperienceData[] = [
         efficient and scalable web applications.
       </>
     ),
+    id: "lingotalk",
   },
 ];
 

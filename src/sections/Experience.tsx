@@ -11,7 +11,7 @@ const Experience = () => {
   return (
     <section
       ref={ref}
-      className="mx-auto max-w-[52rem] mt-12 md:mt-20 pb-12 md:pb-20 px-4 sm:px-6 2xl:px-0 scroll-m-28"
+      className="mx-auto max-w-[52rem] mt-12 md:mt-20 pb-12 md:pb-20 px-4 sm:px-6 2xl:px-0"
       id="experience"
     >
       <Heading title="Experience" subtitle="Glympse of My Career Journey" />
@@ -26,6 +26,8 @@ const Experience = () => {
             companyName={exp.company.name}
             companyWebsite={exp.company.websiteURL}
             location={exp.location}
+            id={exp.id}
+            hasProjects={exp.projects !== undefined && exp.projects.length > 0}
           />
         ))}
       </div>

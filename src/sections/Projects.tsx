@@ -11,7 +11,7 @@ const Projects = () => {
   return (
     <section
       ref={ref}
-      className="mx-auto max-w-screen-xl pb-12 md:pb-20 px-4 sm:px-6 2xl:px-0 scroll-m-28"
+      className="mx-auto max-w-screen-xl pb-12 md:pb-20 px-4 sm:px-6 2xl:px-0"
       id="portfolio"
     >
       <Heading

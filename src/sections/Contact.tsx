@@ -9,7 +9,7 @@ const Contact = () => {
   const { ref } = useSectionInView("Contact");
 
   return (
-    <section ref={ref} className="pb-20 px-4 sm:px-6 2xl:px-0 scro" id="contact">
+    <section ref={ref} className="pb-20 px-4 sm:px-6 2xl:px-0" id="contact">
       <div className="flex flex-col sm:flex-row items-center max-w-4xl mx-auto gap-6 sm:gap-4 rounded-lg px-8 py-8 shadow-lg">
         <div className="w-full sm:w-1/2">
           <div className="sm:max-w-sm">

@@ -6,6 +6,7 @@ import Script from "next/script";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
+import ScrollToHash from "@/components/ScrollToHash";
 
 const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
@@ -22,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <link rel="icon" href="logo.svg" type="image/svg" />
+    <html lang="en" className="scroll-pt-28">
+      <link rel="icon" href="/logo.svg" type="image/svg" />
       <meta
         name="description"
         content="Explore the world of web development with Alfonsus Avianto Chandrawan, a skilled frontend engineer passionate about creating seamless and visually appealing digital experiences. Discover his portfolio, expertise, and projects showcasing a blend of creativity and technical proficiency in frontend technologies."
@@ -33,6 +34,7 @@ export default function RootLayout({
         content="Alfonsus Avianto Chandrawan, Frontend Engineer, Web Developer, React, JavaScript, HTML, CSS, Portfolio, Web Design, User Interface, User Experience, Coding, Creative Developer"
       />
       <body suppressHydrationWarning={true} className={inter.className}>
+        <ScrollToHash />
         <ActiveSectionContextProvider>
           <Navigation />
           <main>{children}</main>

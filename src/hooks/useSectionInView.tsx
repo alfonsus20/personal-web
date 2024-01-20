@@ -10,7 +10,6 @@ export default function useSectionInView(
   threshold = 0.25
 ) {
   const { ref, inView } = useInView({ threshold });
-
   const { setActiveSection } = useActiveSectionContext();
 
   useEffect(() => {
@@ -18,6 +17,12 @@ export default function useSectionInView(
       setActiveSection(sectionName);
     }
   }, [inView, setActiveSection, sectionName]);
+
+  useEffect(() => {
+    return () => {
+      setActiveSection("");
+    };
+  }, []);
 
   return {
     ref,
