@@ -51,11 +51,11 @@ const InternshipDetail = ({ params: { id } }: { params: { id: string } }) => {
       </section>
       <section>
         <h2 className="text-2xl font-semibold mb-4">About the Company</h2>
-        <div>{company.about}</div>
+        <div className="text-justify">{company.about}</div>
       </section>
       <section>
         <h2 className="text-2xl font-semibold mb-4">Job Description</h2>
-        <div>{description}</div>
+        <div className="text-justify">{description}</div>
       </section>
       {projects && projects.length > 0 && (
         <section id="projects">
