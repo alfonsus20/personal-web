@@ -13,7 +13,7 @@ export const generateStaticParams = () => {
   }));
 };
 
-export const getExperience = (id: string) => {
+const getExperience = (id: string) => {
   const experience = experienceList.find((exp) => exp.id === id);
   return experience;
 };
