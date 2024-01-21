@@ -8,14 +8,14 @@ import Notesgram from "@/assets/images/projects/notesgram.png";
 import Tedx from '@/assets/images/projects/tedx.png';
 import Helto from '@/assets/images/projects/helto.png';
 
-export interface ProjectData {
+export type ProjectData = {
   name: string;
   desc: string;
   githubLink?: string;
   hostingLink?: string;
   technologies: string[];
   image: StaticImageData;
-}
+};
 
 const projectList: ProjectData[] = [
   {

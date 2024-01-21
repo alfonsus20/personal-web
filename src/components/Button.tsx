@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useMemo } from "react";
 import { CommonSize } from "../types/design";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonProps = {
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   variant?: "primary" | "secondary";
@@ -11,7 +11,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
   target?: string;
   size?: CommonSize;
-}
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = ({
   leftIcon,

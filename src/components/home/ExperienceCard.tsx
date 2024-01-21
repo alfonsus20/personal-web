@@ -5,11 +5,11 @@ import { MotionProps, motion } from "framer-motion";
 import Button from "@/components/Button";
 import { MdOutlineWeb, MdOutlineInfo } from "react-icons/md";
 
-interface ExperienceProps extends Omit<ExperienceData, "company"> {
+type ExperienceProps = {
   companyName: string;
   companyWebsite?: string;
   hasProjects: boolean;
-}
+} & Omit<ExperienceData, "company">;
 
 const contentAnim: MotionProps = {
   initial: {

@@ -30,19 +30,19 @@ import LingotalkLogo from "@/assets/images/experience/lingotalk/logo.webp";
 
 import { StaticImageData } from "next/image";
 
-interface CompanyData {
+type CompanyData = {
   name: string;
   websiteURL?: string;
   logo: StaticImageData;
   about: string;
-}
+};
 
-interface ProjectData {
+type ProjectData = {
   name: string;
   screenshots: StaticImageData[];
-}
+};
 
-export interface ExperienceData {
+export type ExperienceData = {
   jobTitle: string;
   company: CompanyData;
   location: string;
@@ -52,7 +52,7 @@ export interface ExperienceData {
   id: string;
   projects?: ProjectData[];
   memories?: StaticImageData[];
-}
+};
 
 const experienceList: ExperienceData[] = [
   {

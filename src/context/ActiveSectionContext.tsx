@@ -3,14 +3,15 @@
 import { SectionName } from "@/types/section";
 import React, { useState, createContext, useContext } from "react";
 
-interface ActiveSectionContextProviderProps {
+type ActiveSectionContextProviderProps = {
   children: React.ReactNode;
-}
+};
 
-interface IActiveSectionContext {
+type IActiveSectionContext = {
   activeSection: SectionName;
   setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
-}
+};
+
 export const ActiveSectionContext = createContext<IActiveSectionContext | null>(
   null
 );

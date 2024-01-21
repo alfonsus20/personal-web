@@ -5,10 +5,10 @@ import skillSet from "@/data/skills";
 import useSectionInView from "@/hooks/useSectionInView";
 import { MotionProps, motion } from "framer-motion";
 
-interface SkillRowProps {
+type SkillRowProps = {
   skills: string[];
   title: string;
-}
+};
 
 const skillRowAnim: MotionProps = {
   initial: "hidden",
