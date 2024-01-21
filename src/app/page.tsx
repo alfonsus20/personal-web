@@ -1,8 +1,8 @@
-import Contact from "@/sections/Contact";
-import Experience from "@/sections/Experience";
-import Hero from "@/sections/Hero";
-import Projects from "@/sections/Projects";
-import Skills from "@/sections/Skills";
+import Contact from "@/sections/home/Contact";
+import Experience from "@/sections/home/Experience";
+import Hero from "@/sections/home/Hero";
+import Projects from "@/sections/home/Projects";
+import Skills from "@/sections/home/Skills";
 
 const Home = () => {
   return (

@@ -1,11 +1,11 @@
 import cn from "@/utils/classnames";
 
-interface HeadingProps {
+type HeadingProps = {
   title: string;
   subtitle: string;
   position?: "left" | "center" | "right";
   id?: string;
-}
+};
 
 const Heading = ({
   title,
