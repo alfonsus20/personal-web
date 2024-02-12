@@ -15,7 +15,7 @@ const Hero = () => {
     <section
       ref={ref}
       id="hero"
-      className="flex flex-col-reverse md:flex-row items-center justify-end mx-auto max-w-screen-xl gap-6 min-h-[calc(100vh-6rem)] pt-4 md:pt-0 pb-10 px-4 sm:px-6 2xl:px-0 scroll-m-[100vh]"
+      className="flex flex-col-reverse md:flex-row items-center justify-end mx-auto max-w-screen-xl gap-6 min-h-[calc(min(100vh,800px)-6rem)] pt-4 md:pt-0 pb-10 px-4 sm:px-6 2xl:px-0 scroll-m-[100vh]"
     >
       <div className="w-full md:w-7/12 lg:w-2/3">
         <div className="mb-7">

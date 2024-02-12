@@ -11,8 +11,6 @@ import GarenaLogo from "@/assets/images/experience/garena/logo.png";
 import GambitChest from "@/assets/images/experience/garena/projects/gambit-chest.png";
 import LuckySpin from "@/assets/images/experience/garena/projects/lucky-spin.png";
 
-import BcaLogo from "@/assets/images/experience/bca/logo.png";
-
 import TiketLogo from "@/assets/images/experience/tiket/logo.png";
 import Carpool from "@/assets/images/experience/tiket/projects/car-pool.png";
 import Carpool2 from "@/assets/images/experience/tiket/projects/car-pool-2.png";
@@ -92,38 +90,6 @@ const experienceList: ExperienceData[] = [
         screenshots: [OrderManagement, OrderManagement2],
       },
     ],
-  },
-  {
-    jobTitle: "IT Specialist",
-    company: {
-      name: "Bank Central Asia",
-      websiteURL: "https://www.bca.co.id/",
-      logo: BcaLogo,
-      about:
-        "Bank Central Asia (BCA) is one of Indonesia's largest private banks, headquartered in Jakarta. Established in 1957, BCA has been a significant player in the country's banking sector, offering a wide range of financial services, including consumer and commercial banking, wealth management, and electronic banking solutions.",
-    },
-    location: "Tangerang, Indonesia",
-    startDate: "Apr 2023",
-    endDate: "Aug 2023",
-    description: (
-      <>
-        I created a standardized <span className="font-semibold">Vue.js 3</span>{" "}
-        <span className="font-semibold">TypeScript</span> boilerplate for use
-        across multiple repositories, offering configurable Sentry for error
-        monitoring and Keycloak for secure authentication. Additionally, I
-        successfully transformed a single-piece SAP HRIS project&apos;s frontend
-        into a <span className="font-semibold">microfrontend</span> architecture
-        using <span className="font-semibold">Vue.js</span> and{" "}
-        <span className="font-semibold">Qiankun (Single SPA)</span>, resulting
-        in one root app and three separate micro apps. This architectural shift
-        allowed for parallel development and deployment. I conducted research to
-        identify state-of-the-art frontend, backend, and end-to-end testing
-        technologies to enhance project quality. Furthermore, I gathered user
-        and stakeholder requirements and translated them into user interface
-        designs using <span className="font-semibold">Figma</span>.
-      </>
-    ),
-    id: "bca",
   },
   {
     jobTitle: "Frontend Engineer Intern",
