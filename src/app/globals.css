@@ -9,3 +9,9 @@ html {
 body {
   background-color: white;
 }
+
+@layer base {
+  ul {
+    @apply list-disc pl-4 space-y-1.5;
+  }
+}

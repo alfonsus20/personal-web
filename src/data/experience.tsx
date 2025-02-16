@@ -1,3 +1,6 @@
+import TravelokaLogo from "@/assets/images/experience/traveloka/logo.png";
+
+// McEasy
 import McEasyLogo from "@/assets/images/experience/mceasy/logo.webp";
 import FleetAvailability from "@/assets/images/experience/mceasy/projects/fleet-availability.png";
 import FleetTask1 from "@/assets/images/experience/mceasy/projects/fleet-task.png";
@@ -7,10 +10,12 @@ import OrderManagement from "@/assets/images/experience/mceasy/projects/delivery
 import OrderManagement2 from "@/assets/images/experience/mceasy/projects/delivery-order-2.png";
 import Liveview from "@/assets/images/experience/mceasy/projects/liveview.png";
 
+// Garena
 import GarenaLogo from "@/assets/images/experience/garena/logo.png";
 import GambitChest from "@/assets/images/experience/garena/projects/gambit-chest.png";
 import LuckySpin from "@/assets/images/experience/garena/projects/lucky-spin.png";
 
+// Tiket.com
 import TiketLogo from "@/assets/images/experience/tiket/logo.png";
 import Carpool from "@/assets/images/experience/tiket/projects/car-pool.png";
 import Carpool2 from "@/assets/images/experience/tiket/projects/car-pool-2.png";
@@ -22,8 +27,10 @@ import CarRentalSeo from "@/assets/images/experience/tiket/projects/car-rental-s
 import CarRentalDashboard from "@/assets/images/experience/tiket/projects/car-rental-dashboard.png";
 import FlightDashboard from "@/assets/images/experience/tiket/projects/flight-dashboard.png";
 
+// Kalbe
 import KalbeLogo from "@/assets/images/experience/kalbe/logo.png";
 
+// Lingotalk
 import LingotalkLogo from "@/assets/images/experience/lingotalk/logo.webp";
 
 import { StaticImageData } from "next/image";
@@ -54,6 +61,55 @@ export type ExperienceData = {
 
 const experienceList: ExperienceData[] = [
   {
+    jobTitle: "Software Engineer",
+    company: {
+      name: "Traveloka",
+      websiteURL: "https://www.traveloka.com",
+      logo: TravelokaLogo,
+      about:
+        "Traveloka is a leading Southeast Asian online travel company that provides a wide range of travel needs in one platform, enabling customers to create moments together with their loved ones. Traveloka offers flights, hotels, trains, flight + hotel packages, attractions & activities, connectivity products, airport transports, and buses.",
+    },
+    location: "Jakarta, Indonesia",
+    startDate: "March 2024",
+    description: (
+      <ul>
+        <li>
+          Develop and maintain desktop and mobile web applications, internal
+          tools, and mobile apps for approximately six different products using{" "}
+          <span className="font-semibold">Next.js</span>,{" "}
+          <span className="font-semibold">TypeScript</span>, and{" "}
+          <span className="font-semibold">React Native</span>.
+        </li>
+        <li>
+          Develop web end-to-end automation test cases using{" "}
+          <span className="font-semibold">Playwright</span>, increasing test
+          coverage by 49.58%, reducing manual effort, and improving testing
+          stability.
+        </li>
+        <li>
+          Automate various business processes using{" "}
+          <span className="font-semibold">Puppeteer</span> and{" "}
+          <span className="font-semibold">
+            UIPath Robotic Process Automation
+          </span>
+          .
+        </li>
+        <li>
+          Take the initiative to resolve security vulnerabilities across 9
+          repositories, resolve 79 critical and 403 high-priority
+          vulnerabilities, modernize outdated tools, and improve system security
+          and maintainability.
+        </li>
+        <li>
+          Mentor interns by providing technical guidance, onboarding support,
+          and regular code reviews, ensuring a smooth learning experience.
+        </li>
+      </ul>
+    ),
+    id: "traveloka",
+    projects: [],
+  },
+  {
     jobTitle: "Frontend Engineer",
     company: {
       name: "McEasy",
@@ -64,6 +120,7 @@ const experienceList: ExperienceData[] = [
     },
     location: "Surabaya, Indonesia",
     startDate: "Sep 2023",
+    endDate: "March 2024",
     description: (
       <>
         I&apos;m currently working on an exciting project to create a logistic
