@@ -1,6 +1,7 @@
 import experienceList from "@/data/experience";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import clsx from "clsx";
 
 import Project1 from "@/assets/images/experience/garena/projects/lucky-spin.png";
 
@@ -64,7 +65,13 @@ const InternshipDetail = ({ params: { id } }: { params: { id: string } }) => {
             {projects.map((project, idx) => (
               <li className="text-xl font-semibold" key={idx}>
                 <h3 className="mb-3">{project.name}</h3>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div
+                  className={clsx("grid gap-4", {
+                    "md:grid-cols-3": project.screenshotsGrid === 3,
+                    "md:grid-cols-2":
+                      !project.screenshotsGrid || project.screenshotsGrid === 2,
+                  })}
+                >
                   {project.screenshots.map((screenshot, screenshotIdx) => (
                     <Image
                       key={screenshotIdx}
@@ -77,6 +84,11 @@ const InternshipDetail = ({ params: { id } }: { params: { id: string } }) => {
                     />
                   ))}
                 </div>
+                {project.decription && (
+                  <div className="text-base font-normal mt-4">
+                    {project.decription}
+                  </div>
+                )}
               </li>
             ))}
           </ul>

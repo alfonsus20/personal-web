@@ -1,4 +1,13 @@
+// Traveloka
 import TravelokaLogo from "@/assets/images/experience/traveloka/logo.png";
+import SCO2 from "@/assets/images/experience/traveloka/projects/sco/SCO-2.jpg";
+import SCO3 from "@/assets/images/experience/traveloka/projects/sco/SCO-3.jpg";
+import SCO4 from "@/assets/images/experience/traveloka/projects/sco/SCO-4.jpg";
+import SCO5 from "@/assets/images/experience/traveloka/projects/sco/SCO-5.jpg";
+import TrainSEOStation1 from "@/assets/images/experience/traveloka/projects/train-seo/station-1.png";
+import TrainSEOStation2 from "@/assets/images/experience/traveloka/projects/train-seo/station-2.png";
+import TrainSEOStation3 from "@/assets/images/experience/traveloka/projects/train-seo/station-3.png";
+import TransSEORoute1 from "@/assets/images/experience/traveloka/projects/train-seo/route-1.png";
 
 // McEasy
 import McEasyLogo from "@/assets/images/experience/mceasy/logo.webp";
@@ -34,6 +43,7 @@ import KalbeLogo from "@/assets/images/experience/kalbe/logo.png";
 import LingotalkLogo from "@/assets/images/experience/lingotalk/logo.webp";
 
 import { StaticImageData } from "next/image";
+import { FaLink } from "react-icons/fa";
 
 type CompanyData = {
   name: string;
@@ -45,6 +55,8 @@ type CompanyData = {
 type ProjectData = {
   name: string;
   screenshots: StaticImageData[];
+  screenshotsGrid?: number;
+  decription?: React.ReactNode;
 };
 
 export type ExperienceData = {
@@ -107,7 +119,46 @@ const experienceList: ExperienceData[] = [
       </ul>
     ),
     id: "traveloka",
-    projects: [],
+    projects: [
+      {
+        name: "Insurance Checkout Page",
+        screenshots: [SCO2, SCO3, SCO4, SCO5],
+        screenshotsGrid: 3,
+      },
+      {
+        name: "Train SEO Page",
+        screenshots: [
+          TrainSEOStation1,
+          TrainSEOStation2,
+          TrainSEOStation3,
+          TransSEORoute1,
+        ],
+        decription: (
+          <ul>
+            <li>
+              <a
+                href="https://www.traveloka.com/id-id/kereta-api/stasiun/gambir"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 inline-flex items-center"
+              >
+                Gambir Station Page <FaLink className="ml-1" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.traveloka.com/id-id/kereta-api/rute/jakarta.yogyakarta"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 inline-flex items-center"
+              >
+                Train from Jakarta to Yogyakarta <FaLink className="ml-1" />
+              </a>
+            </li>
+          </ul>
+        ),
+      },
+    ],
   },
   {
     jobTitle: "Frontend Engineer",
