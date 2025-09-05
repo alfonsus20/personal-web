@@ -68,7 +68,7 @@ const InternshipDetail = ({ params: { id } }: { params: { id: string } }) => {
                 <div
                   className={clsx("grid gap-4", {
                     "md:grid-cols-4": project.type === "mobile",
-                    "md:grid-cols-2": project.type === "desktop",
+                    "md:grid-cols-2": project.type !== "mobile",
                   })}
                 >
                   {project.screenshots.map((screenshot, screenshotIdx) => (
