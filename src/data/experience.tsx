@@ -8,6 +8,14 @@ import TrainSEOStation1 from "@/assets/images/experience/traveloka/projects/trai
 import TrainSEOStation2 from "@/assets/images/experience/traveloka/projects/train-seo/station-2.png";
 import TrainSEOStation3 from "@/assets/images/experience/traveloka/projects/train-seo/station-3.png";
 import TransSEORoute1 from "@/assets/images/experience/traveloka/projects/train-seo/route-1.png";
+import Berau1 from "@/assets/images/experience/traveloka/projects/berau/berau-1.png";
+import Berau2 from "@/assets/images/experience/traveloka/projects/berau/berau-2.png";
+import Berau3 from "@/assets/images/experience/traveloka/projects/berau/berau-3.png";
+import Berau4 from "@/assets/images/experience/traveloka/projects/berau/berau-4.png";
+import Berau5 from "@/assets/images/experience/traveloka/projects/berau/berau-5.png";
+import Berau6 from "@/assets/images/experience/traveloka/projects/berau/berau-6.png";
+import Berau7 from "@/assets/images/experience/traveloka/projects/berau/berau-7.png";
+import Berau8 from "@/assets/images/experience/traveloka/projects/berau/berau-8.png";
 
 // McEasy
 import McEasyLogo from "@/assets/images/experience/mceasy/logo.webp";
@@ -55,8 +63,8 @@ type CompanyData = {
 type ProjectData = {
   name: string;
   screenshots: StaticImageData[];
-  screenshotsGrid?: number;
   decription?: React.ReactNode;
+  type?: "mobile" | "desktop";
 };
 
 export type ExperienceData = {
@@ -121,9 +129,14 @@ const experienceList: ExperienceData[] = [
     id: "traveloka",
     projects: [
       {
+        name: "Bus Reschedule",
+        screenshots: [Berau1, Berau2, Berau3, Berau4, Berau5, Berau6, Berau7, Berau8],
+        type: "mobile",
+      },
+      {
         name: "Insurance Checkout Page",
         screenshots: [SCO2, SCO3, SCO4, SCO5],
-        screenshotsGrid: 3,
+        type: "mobile",
       },
       {
         name: "Train SEO Page",
