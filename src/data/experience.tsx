@@ -95,34 +95,49 @@ const experienceList: ExperienceData[] = [
       <ul>
         <li>
           Develop and maintain desktop and mobile web applications, internal
-          tools, and mobile apps for approximately six different products using{" "}
+          tools, Chrome extensions, and mobile apps for{" "}
+          <span className="font-semibold">six different business products</span>{" "}
+          using{" "}
           <span className="font-semibold">Next.js</span>,{" "}
           <span className="font-semibold">TypeScript</span>, and{" "}
           <span className="font-semibold">React Native</span>.
         </li>
         <li>
-          Develop web end-to-end automation test cases using{" "}
-          <span className="font-semibold">Playwright</span>, increasing test
-          coverage by 49.58%, reducing manual effort, and improving testing
-          stability.
+          Migrated internal CI/CD pipelines from{" "}
+          <span className="font-semibold">AWS CodeBuild</span> to{" "}
+          <span className="font-semibold">GitHub Actions</span>, implementing
+          caching strategies that reduced build and deployment time by{" "}
+          <span className="font-semibold">42%</span>.
         </li>
         <li>
-          Automate various business processes using{" "}
-          <span className="font-semibold">Puppeteer</span> and{" "}
-          <span className="font-semibold">
-            UIPath Robotic Process Automation
-          </span>
-          .
-        </li>
-        <li>
-          Take the initiative to resolve security vulnerabilities across 9
-          repositories, resolve 79 critical and 403 high-priority
+          Take the initiative to resolve security vulnerabilities across{" "}
+          <span className="font-semibold">9 repositories</span>, resolve{" "}
+          <span className="font-semibold">79 critical</span> and{" "}
+          <span className="font-semibold">403 high-priority</span>{" "}
           vulnerabilities, modernize outdated tools, and improve system security
           and maintainability.
         </li>
         <li>
-          Mentor interns by providing technical guidance, onboarding support,
-          and regular code reviews, ensuring a smooth learning experience.
+          Develop web end-to-end automation test cases using{" "}
+          <span className="font-semibold">Playwright</span>, increasing test
+          coverage by{" "}
+          <span className="font-semibold">49.58%</span>, reducing manual effort, and improving testing
+          stability.
+        </li>
+        <li>
+          Automated business processes with{" "}
+          <span className="font-semibold">Puppeteer</span> and{" "}
+          <span className="font-semibold">UiPath RPA</span>, saving{" "}
+          <span className="font-semibold">~$1,800/month</span>{" "}
+          in operational costs.
+        </li>
+        <li>
+          Mentor interns and new joiners by providing technical guidance,
+          onboarding support, and regular code reviews.
+        </li>
+        <li>
+          Participated in on-call rotations and documented technical
+          specifications and design decisions.
         </li>
       </ul>
     ),

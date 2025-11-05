@@ -16,9 +16,9 @@ const Experience = () => {
     >
       <Heading title="Experience" subtitle="Glympse of My Career Journey" />
       <div className="mx-auto max-w-4xl relative">
-        {experienceList.map((exp, idx) => (
+        {experienceList.map((exp) => (
           <ExperienceCard
-            key={idx}
+            key={exp.id}
             jobTitle={exp.jobTitle}
             description={exp.description}
             startDate={exp.startDate}

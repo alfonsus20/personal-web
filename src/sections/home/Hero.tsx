@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 import Image from "next/image";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsArrowUpRight } from "react-icons/bs";
-import MyPhoto from "@/assets/images/photo.jpg";
+import MyPhoto from "@/assets/images/photo.webp";
 import { EMAIL_LINK } from "@/data/links";
 import useSectionInView from "@/hooks/useSectionInView";
 
@@ -24,7 +24,6 @@ const Hero = () => {
           </h2>
           <h1 className="font-bold text-5xl mb-5">Frontend Engineer</h1>
           <p className="text-lg">
-            A computer science graduate from the University of Brawijaya.
             I&apos;m a frontend engineer with a passion for crafting intuitive
             and engaging user experiences. With expertise in React, Vue,
             Next.js, and TypeScript, I thrive in developing performant and
@@ -52,8 +51,8 @@ const Hero = () => {
           src={MyPhoto}
           alt="Alfonsus Avianto"
           width={1200}
-          height={1600}
-          className="w-full lg:max-w-[400px] h-full aspect-[16/10] object-cover object-center md:aspect-[3/4] md:ml-auto rounded"
+          height={1200}
+          className="w-full lg:max-w-[400px] h-full aspect-square object-cover object-center md:aspect-[3/4] md:ml-auto rounded"
           placeholder="blur"
           priority
         />
