@@ -18,7 +18,7 @@ const getExperience = (id: string) => {
   return experience;
 };
 
-const InternshipDetail = ({ params: { id } }: { params: { id: string } }) => {
+const ExperienceDetail = ({ params: { id } }: { params: { id: string } }) => {
   const experience = getExperience(id);
 
   if (!experience) {
@@ -123,4 +123,4 @@ const InternshipDetail = ({ params: { id } }: { params: { id: string } }) => {
   );
 };
 
-export default InternshipDetail;
+export default ExperienceDetail;
