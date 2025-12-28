@@ -16,6 +16,11 @@ import Berau5 from "@/assets/images/experience/traveloka/projects/berau/berau-5.
 import Berau6 from "@/assets/images/experience/traveloka/projects/berau/berau-6.png";
 import Berau7 from "@/assets/images/experience/traveloka/projects/berau/berau-7.png";
 import Berau8 from "@/assets/images/experience/traveloka/projects/berau/berau-8.png";
+import Latios1 from "@/assets/images/experience/traveloka/projects/latios/latios-1.jpg";
+import Latios2 from "@/assets/images/experience/traveloka/projects/latios/latios-2.jpg";
+import Latios3 from "@/assets/images/experience/traveloka/projects/latios/latios-3.jpg";
+import Latios4 from "@/assets/images/experience/traveloka/projects/latios/latios-4.jpg";
+import Latios5 from "@/assets/images/experience/traveloka/projects/latios/latios-5.jpg";
 
 // McEasy
 import McEasyLogo from "@/assets/images/experience/mceasy/logo.webp";
@@ -97,8 +102,7 @@ const experienceList: ExperienceData[] = [
           Develop and maintain desktop and mobile web applications, internal
           tools, Chrome extensions, and mobile apps for{" "}
           <span className="font-semibold">six different business products</span>{" "}
-          using{" "}
-          <span className="font-semibold">Next.js</span>,{" "}
+          using <span className="font-semibold">Next.js</span>,{" "}
           <span className="font-semibold">TypeScript</span>, and{" "}
           <span className="font-semibold">React Native</span>.
         </li>
@@ -120,16 +124,15 @@ const experienceList: ExperienceData[] = [
         <li>
           Develop web end-to-end automation test cases using{" "}
           <span className="font-semibold">Playwright</span>, increasing test
-          coverage by{" "}
-          <span className="font-semibold">49.58%</span>, reducing manual effort, and improving testing
-          stability.
+          coverage by <span className="font-semibold">49.58%</span>, reducing
+          manual effort, and improving testing stability.
         </li>
         <li>
           Automated business processes with{" "}
           <span className="font-semibold">Puppeteer</span> and{" "}
           <span className="font-semibold">UiPath RPA</span>, saving{" "}
-          <span className="font-semibold">~$1,800/month</span>{" "}
-          in operational costs.
+          <span className="font-semibold">~$1,800/month</span> in operational
+          costs.
         </li>
         <li>
           Mentor interns and new joiners by providing technical guidance,
@@ -145,7 +148,16 @@ const experienceList: ExperienceData[] = [
     projects: [
       {
         name: "Bus Reschedule",
-        screenshots: [Berau1, Berau2, Berau3, Berau4, Berau5, Berau6, Berau7, Berau8],
+        screenshots: [
+          Berau1,
+          Berau2,
+          Berau3,
+          Berau4,
+          Berau5,
+          Berau6,
+          Berau7,
+          Berau8,
+        ],
         type: "mobile",
       },
       {
@@ -153,6 +165,12 @@ const experienceList: ExperienceData[] = [
         screenshots: [SCO2, SCO3, SCO4, SCO5],
         type: "mobile",
       },
+      {
+        name: "Preflight Report",
+        screenshots: [Latios1, Latios2, Latios3, Latios4, Latios5],
+        type: "mobile",
+      },
+
       {
         name: "Train SEO Page",
         screenshots: [
