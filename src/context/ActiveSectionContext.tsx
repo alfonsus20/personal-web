@@ -7,19 +7,19 @@ type ActiveSectionContextProviderProps = {
   children: React.ReactNode;
 };
 
-type IActiveSectionContext = {
-  activeSection: SectionName;
-  setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
+type ActiveSectionContext = {
+  activeSection: SectionName | null;
+  setActiveSection: React.Dispatch<React.SetStateAction<SectionName | null>>;
 };
 
-export const ActiveSectionContext = createContext<IActiveSectionContext | null>(
-  null
+export const ActiveSectionContext = createContext<ActiveSectionContext | null>(
+  null,
 );
 
 export default function ActiveSectionContextProvider({
   children,
 }: ActiveSectionContextProviderProps) {
-  const [activeSection, setActiveSection] = useState<SectionName>("");
+  const [activeSection, setActiveSection] = useState<SectionName | null>(null);
 
   return (
     <ActiveSectionContext.Provider

@@ -7,7 +7,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function useSectionInView(
   sectionName: SectionName,
-  threshold = 0.25
+  threshold = 0.25,
 ) {
   const { ref, inView } = useInView({ threshold });
   const { setActiveSection } = useActiveSectionContext();
@@ -20,7 +20,7 @@ export default function useSectionInView(
 
   useEffect(() => {
     return () => {
-      setActiveSection("");
+      setActiveSection(null);
     };
   }, []);
 
