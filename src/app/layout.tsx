@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Alfonsus Avianto Chandrawan" }],
   openGraph: {
-    title: "Alfonsus Avianto Chandrawan - Frontend Engineer",
+    title: "Alfonsus Avianto Chandrawan",
     description: "A frontend web engineer.",
     url: "https://alfonsusvianto.vercel.app",
     siteName: "Alfonsus Avianto Chandrawan Portfolio",
@@ -40,18 +40,18 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.svg",
-        width: 500,
-        height: 500,
-        alt: "Alfonsus Avianto Chandrawan - Frontend Engineer",
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Alfonsus Avianto Chandrawan",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alfonsus Avianto Chandrawan - Frontend Engineer",
+    title: "Alfonsus Avianto Chandrawan",
     description: "A frontend web engineer.",
-    images: ["/logo.svg"],
+    images: ["/og-image.svg"],
   },
 };
 
@@ -62,7 +62,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-pt-28">
-      <link rel="icon" href="/logo.svg" type="image/svg" />
+      <link rel="icon" href="/og-image.svg" type="image/svg" />
       <body suppressHydrationWarning={true} className={inter.className}>
         <ScrollToHash />
         <ActiveSectionContextProvider>
