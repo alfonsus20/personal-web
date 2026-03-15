@@ -24,7 +24,7 @@ function ProjectCard(props: Props) {
 
     if (interfaceType === "mobile") {
       return (
-        <div className="grid gap-8 grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {displayedScreenshots.images.map((image, idx) => (
             <Image
               key={idx}
@@ -41,7 +41,7 @@ function ProjectCard(props: Props) {
     }
 
     return (
-      <div className="grid gap-8 grid-cols-2">
+      <div className="grid gap-8 sm:grid-cols-2">
         {displayedScreenshots.images.map((image, idx) => (
           <Image
             key={idx}
