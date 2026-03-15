@@ -1,3 +1,6 @@
-import menus from "@/data/menu";
+type SectionName = "Home" | "Experience" | "Skills" | "Portfolio" | "Contact";
 
-export type SectionName = (typeof menus)[number]['name'] | string;
+export type Section = {
+  name: SectionName;
+  href: string;
+};

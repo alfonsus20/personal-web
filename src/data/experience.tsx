@@ -55,34 +55,9 @@ import KalbeLogo from "@/assets/images/experience/kalbe/logo.png";
 // Lingotalk
 import LingotalkLogo from "@/assets/images/experience/lingotalk/logo.webp";
 
-import { StaticImageData } from "next/image";
 import { FaLink } from "react-icons/fa";
 
-type CompanyData = {
-  name: string;
-  websiteURL?: string;
-  logo: StaticImageData;
-  about: string;
-};
-
-type ProjectData = {
-  name: string;
-  screenshots: StaticImageData[];
-  decription?: React.ReactNode;
-  type?: "mobile" | "desktop";
-};
-
-export type ExperienceData = {
-  jobTitle: string;
-  company: CompanyData;
-  location: string;
-  startDate: string;
-  endDate?: string;
-  description: React.ReactNode;
-  id: string;
-  projects?: ProjectData[];
-  memories?: StaticImageData[];
-};
+import { ExperienceData } from "@/types/data";
 
 const experienceList: ExperienceData[] = [
   {
@@ -149,37 +124,54 @@ const experienceList: ExperienceData[] = [
       {
         name: "Bus Reschedule",
         screenshots: [
-          Berau1,
-          Berau2,
-          Berau3,
-          Berau4,
-          Berau5,
-          Berau6,
-          Berau7,
-          Berau8,
+          {
+            interfaceType: "mobile",
+            images: [
+              Berau1,
+              Berau2,
+              Berau3,
+              Berau4,
+              Berau5,
+              Berau6,
+              Berau7,
+              Berau8,
+            ],
+          },
         ],
-        type: "mobile",
       },
       {
         name: "Insurance Checkout Page",
-        screenshots: [SCO2, SCO3, SCO4, SCO5],
-        type: "mobile",
+        screenshots: [
+          {
+            interfaceType: "mobile",
+            images: [SCO2, SCO3, SCO4, SCO5],
+          },
+        ],
       },
       {
         name: "Preflight Report",
-        screenshots: [Latios1, Latios2, Latios3, Latios4, Latios5],
-        type: "mobile",
+        screenshots: [
+          {
+            images: [Latios1, Latios2, Latios3, Latios4, Latios5],
+            interfaceType: "mobile",
+          },
+        ],
       },
 
       {
         name: "Train SEO Page",
         screenshots: [
-          TrainSEOStation1,
-          TrainSEOStation2,
-          TrainSEOStation3,
-          TransSEORoute1,
+          {
+            images: [
+              TrainSEOStation1,
+              TrainSEOStation2,
+              TrainSEOStation3,
+              TransSEORoute1,
+            ],
+            interfaceType: "desktop",
+          },
         ],
-        decription: (
+        description: (
           <ul>
             <li>
               <a
@@ -226,8 +218,8 @@ const experienceList: ExperienceData[] = [
         <span className="font-semibold">Bootstrap</span>,{" "}
         <span className="font-semibold">Vuex</span>, and{" "}
         <span className="font-semibold">SASS</span>. This helps us build a
-        user-friendly and responsive interface. I&apos;m also making data look
-        awesome with <span className="font-semibold">Chart.js</span> and
+        user-friendly and responsive interfaceType. I&apos;m also making data
+        look awesome with <span className="font-semibold">Chart.js</span> and
         integrating Google Maps for location services. And, I make sure our code
         is top-notch by reviewing what our team and others contribute, making
         sure we stick to the best practices and project guidelines.
@@ -235,13 +227,50 @@ const experienceList: ExperienceData[] = [
     ),
     id: "mceasy",
     projects: [
-      { name: "Dashboard", screenshots: [Dashboard] },
-      { name: "Fleet Availability", screenshots: [FleetAvailability] },
-      { name: "Liveview Monitoring", screenshots: [Liveview] },
-      { name: "Fleet Task Management", screenshots: [FleetTask1, FleetTask2] },
+      {
+        name: "Dashboard",
+        screenshots: [
+          {
+            interfaceType: "desktop",
+            images: [Dashboard],
+          },
+        ],
+      },
+      {
+        name: "Fleet Availability",
+        screenshots: [
+          {
+            interfaceType: "desktop",
+            images: [FleetAvailability],
+          },
+        ],
+      },
+      {
+        name: "Liveview Monitoring",
+        screenshots: [
+          {
+            interfaceType: "desktop",
+            images: [Liveview],
+          },
+        ],
+      },
+      {
+        name: "Fleet Task Management",
+        screenshots: [
+          {
+            interfaceType: "desktop",
+            images: [FleetTask1, FleetTask2],
+          },
+        ],
+      },
       {
         name: "Order Management",
-        screenshots: [OrderManagement, OrderManagement2],
+        screenshots: [
+          {
+            interfaceType: "desktop",
+            images: [OrderManagement, OrderManagement2],
+          },
+        ],
       },
     ],
   },
@@ -296,8 +325,24 @@ const experienceList: ExperienceData[] = [
     ),
     id: "garena",
     projects: [
-      { name: "Lucky Spin", screenshots: [LuckySpin] },
-      { name: "Gambit Chest", screenshots: [GambitChest] },
+      {
+        name: "Lucky Spin",
+        screenshots: [
+          {
+            interfaceType: "desktop",
+            images: [LuckySpin],
+          },
+        ],
+      },
+      {
+        name: "Gambit Chest",
+        screenshots: [
+          {
+            interfaceType: "desktop",
+            images: [GambitChest],
+          },
+        ],
+      },
     ],
   },
   {
@@ -333,25 +378,45 @@ const experienceList: ExperienceData[] = [
       {
         name: "Car Pool Management (Car Rental)",
         screenshots: [
-          Carpool,
-          Carpool2,
-          Carpool3,
-          Carpool4,
-          Carpool5,
-          Carpool6,
+          {
+            interfaceType: "desktop",
+            images: [
+              Carpool,
+              Carpool2,
+              Carpool3,
+              Carpool4,
+              Carpool5,
+              Carpool6,
+            ],
+          },
         ],
       },
       {
         name: "Car Rental SEO Dashboard",
-        screenshots: [CarRentalSeo],
+        screenshots: [
+          {
+            interfaceType: "desktop",
+            images: [CarRentalSeo],
+          },
+        ],
       },
       {
         name: "Car Rental Dashboard",
-        screenshots: [CarRentalDashboard],
+        screenshots: [
+          {
+            interfaceType: "desktop",
+            images: [CarRentalDashboard],
+          },
+        ],
       },
       {
         name: "Flight Dashboard",
-        screenshots: [FlightDashboard],
+        screenshots: [
+          {
+            interfaceType: "desktop",
+            images: [FlightDashboard],
+          },
+        ],
       },
     ],
   },
