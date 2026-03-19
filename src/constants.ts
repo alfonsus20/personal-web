@@ -1,1 +1,1 @@
-export const PRODUCTION_URL = "https://alfonsusavianto.vercel.app";
+export const PRODUCTION_URL = "https://alfonsusavianto.my.id";
