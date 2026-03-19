@@ -15,6 +15,44 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Alfonsus Avianto Chandrawan",
+  description: "A frontend web engineer.",
+  keywords: [
+    "Alfonsus Avianto Chandrawan",
+    "Frontend Engineer",
+    "Web Developer",
+    "React",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Portfolio",
+    "Web Design",
+    "User Interface",
+    "User Experience",
+    "Coding",
+  ],
+  authors: [{ name: "Alfonsus Avianto Chandrawan" }],
+  openGraph: {
+    title: "Alfonsus Avianto Chandrawan",
+    description: "A frontend web engineer.",
+    url: "https://alfonsusvianto.vercel.app",
+    siteName: "Alfonsus Avianto Chandrawan Portfolio",
+    locale: "en",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Alfonsus Avianto Chandrawan",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alfonsus Avianto Chandrawan",
+    description: "A frontend web engineer.",
+    images: ["/og-image.svg"],
+  },
 };
 
 export default function RootLayout({
@@ -24,15 +62,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-pt-28">
-      <link rel="icon" href="/logo.svg" type="image/svg" />
-      <meta
-        name="description"
-        content="Explore the world of web development with Alfonsus Avianto Chandrawan, a skilled frontend engineer passionate about creating seamless and visually appealing digital experiences. Discover his portfolio, expertise, and projects showcasing a blend of creativity and technical proficiency in frontend technologies."
-      />
-      <meta
-        name="keywords"
-        content="Alfonsus Avianto Chandrawan, Frontend Engineer, Web Developer, React, JavaScript, HTML, CSS, Portfolio, Web Design, User Interface, User Experience, Coding, Creative Developer"
-      />
+      <link rel="icon" href="/og-image.svg" type="image/svg" />
       <body suppressHydrationWarning={true} className={inter.className}>
         <ScrollToHash />
         <ActiveSectionContextProvider>

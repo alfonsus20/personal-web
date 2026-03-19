@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import clsx from "clsx";
 
 import Project1 from "@/assets/images/experience/garena/projects/lucky-spin.png";
+import ProjectCard from "@/components/experience/ProjectCard";
 
 export const generateStaticParams = () => {
   return experienceList.map((exp) => ({
@@ -63,62 +64,11 @@ const ExperienceDetail = ({ params: { id } }: { params: { id: string } }) => {
           <h2 className="text-2xl font-semibold mb-4">Projects</h2>
           <ul className="list-decimal pl-6 space-y-8">
             {projects.map((project, idx) => (
-              <li className="text-xl font-semibold" key={idx}>
-                <h3 className="mb-3">{project.name}</h3>
-                <div
-                  className={clsx("grid gap-4", {
-                    "md:grid-cols-4": project.type === "mobile",
-                    "md:grid-cols-2": project.type !== "mobile",
-                  })}
-                >
-                  {project.screenshots.map((screenshot, screenshotIdx) => (
-                    <Image
-                      key={screenshotIdx}
-                      src={screenshot}
-                      alt={`${project.name}-${screenshotIdx}`}
-                      width={640}
-                      height={360}
-                      className="col-span-1 object-top object-cover"
-                      placeholder="blur"
-                    />
-                  ))}
-                </div>
-                {project.decription && (
-                  <div className="text-base font-normal mt-4">
-                    {project.decription}
-                  </div>
-                )}
-              </li>
+              <ProjectCard key={idx} {...project} />
             ))}
           </ul>
         </section>
       )}
-
-      <section className="hidden">
-        <h2 className="text-2xl font-semibold mb-4">Memories</h2>
-        <div className="grid gap-2 grid-cols-12 grid-rows-12 aspect-square">
-          <div className="bg-red-400 col-span-8 row-span-6">
-            <Image
-              src={Project1}
-              alt="project1"
-              width={1200}
-              height={675}
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
-          <div className="bg-green-500 col-span-4 row-span-6">
-            <Image
-              src={Project1}
-              alt="project1"
-              width={1200}
-              height={675}
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
-          <div className="bg-yellow-400 col-span-4 row-span-6"></div>
-          <div className="bg-purple-500 col-span-8 row-span-6"></div>
-        </div>
-      </section>
     </div>
   );
 };
