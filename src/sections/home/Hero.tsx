@@ -55,6 +55,7 @@ const Hero = () => {
           className="w-full lg:max-w-[400px] h-full aspect-square object-cover object-center md:aspect-[3/4] md:ml-auto rounded"
           placeholder="blur"
           priority
+          fetchPriority="high"
         />
       </div>
     </section>

@@ -59,7 +59,7 @@ import { FaLink } from "react-icons/fa";
 
 import { ExperienceData } from "@/types/data";
 
-const experienceList: ExperienceData[] = [
+const EXPERIENCE_DATA: ExperienceData[] = [
   {
     jobTitle: "Software Engineer",
     company: {
@@ -380,14 +380,7 @@ const experienceList: ExperienceData[] = [
         screenshots: [
           {
             interfaceType: "desktop",
-            images: [
-              Carpool,
-              Carpool2,
-              Carpool3,
-              Carpool4,
-              Carpool5,
-              Carpool6,
-            ],
+            images: [Carpool, Carpool2, Carpool3, Carpool4, Carpool5, Carpool6],
           },
         ],
       },
@@ -445,4 +438,4 @@ const experienceList: ExperienceData[] = [
   },
 ];
 
-export default experienceList;
+export default EXPERIENCE_DATA;
