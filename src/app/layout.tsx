@@ -30,29 +30,7 @@ export const metadata: Metadata = {
     "User Experience",
     "Coding",
   ],
-  authors: [{ name: "Alfonsus Avianto Chandrawan" }],
-  openGraph: {
-    title: "Alfonsus Avianto Chandrawan",
-    description: "A frontend web engineer.",
-    url: "https://alfonsusvianto.vercel.app",
-    siteName: "Alfonsus Avianto Chandrawan Portfolio",
-    locale: "en",
-    type: "website",
-    images: [
-      {
-        url: "/og-image.svg",
-        width: 1200,
-        height: 630,
-        alt: "Alfonsus Avianto Chandrawan",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Alfonsus Avianto Chandrawan",
-    description: "A frontend web engineer.",
-    images: ["/og-image.svg"],
-  },
+  authors: [{ name: "Alfonsus Avianto Chandrawan" }]
 };
 
 export default function RootLayout({
@@ -62,7 +40,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-pt-28">
-      <link rel="icon" href="/logo.svg" type="image/svg" />
       <body suppressHydrationWarning={true} className={inter.className}>
         <ScrollToHash />
         <ActiveSectionContextProvider>
