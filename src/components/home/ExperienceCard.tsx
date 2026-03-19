@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FcBriefcase, FcCalendar } from "react-icons/fc";
-import { MotionProps, motion } from "framer-motion";
+import { MotionProps, motion } from "motion/react";
 import Button from "@/components/Button";
 import { MdOutlineWeb, MdOutlineInfo } from "react-icons/md";
 import { ExperienceData } from "@/types/data";

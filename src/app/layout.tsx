@@ -1,12 +1,12 @@
 import Navigation from "@/components/Navigation";
-import "./globals.css";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
 import ScrollToHash from "@/components/ScrollToHash";
+import "./globals.css";
+import type { Metadata } from "next";
 
 const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
@@ -62,7 +62,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-pt-28">
-      <link rel="icon" href="/og-image.svg" type="image/svg" />
+      <link rel="icon" href="/logo.svg" type="image/svg" />
       <body suppressHydrationWarning={true} className={inter.className}>
         <ScrollToHash />
         <ActiveSectionContextProvider>

@@ -19,7 +19,13 @@ const getExperience = (id: string) => {
   return experience;
 };
 
-const ExperienceDetail = ({ params: { id } }: { params: { id: string } }) => {
+const ExperienceDetail = async (props: { params: Promise<{ id: string }> }) => {
+  const params = await props.params;
+
+  const {
+    id
+  } = params;
+
   const experience = getExperience(id);
 
   if (!experience) {

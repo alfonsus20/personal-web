@@ -3,7 +3,7 @@
 import Heading from "@/components/Heading";
 import skillSet from "@/data/skills";
 import useSectionInView from "@/hooks/useSectionInView";
-import { MotionProps, motion } from "framer-motion";
+import { MotionProps, motion } from "motion/react";
 
 type SkillRowProps = {
   skills: string[];

@@ -1,6 +1,6 @@
 "use client";
 
-import { useScroll } from "framer-motion";
+import { useScroll } from "motion/react";
 import { useState } from "react";
 import { BsArrowUp } from "react-icons/bs";
 

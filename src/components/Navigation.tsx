@@ -3,7 +3,7 @@
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 import menus from "@/data/menu";
 import cn from "@/utils/classnames";
-import { MotionProps, useScroll, motion } from "framer-motion";
+import { MotionProps, useScroll, motion } from "motion/react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -66,7 +66,7 @@ const Navigation = () => {
         className={cn("sticky top-0 bg-white z-10", { "shadow-lg": shadowed })}
       >
         <div className="flex justify-between items-center max-w-screen-xl mx-auto py-6 px-4 sm:px-6 2xl:px-0">
-          <Link href='/' className="flex justify-between items-center gap-x-3">
+          <Link href="/" className="flex justify-between items-center gap-x-3">
             <div className="border-2 border-black rounded-full w-12 h-12 flex items-center justify-center font-semibold text-xl">
               A
             </div>
@@ -101,7 +101,7 @@ const Navigation = () => {
       {/* Mobile Navbar */}
       <motion.div
         className={cn(
-          "z-20 fixed left-0 right-0 bg-gray-900 flex flex-col text-gray-300 p-6 transition-all duration-300 ease-in-out"
+          "z-20 fixed left-0 right-0 bg-gray-900 flex flex-col text-gray-300 p-6 transition-all duration-300 ease-in-out",
         )}
         {...mobileNavAnim}
         animate={visible ? "visible" : "hidden"}
