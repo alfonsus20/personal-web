@@ -31,7 +31,7 @@ function ProjectCard(props: Props) {
               src={image}
               width={640}
               height={360}
-              className="col-span-1 object-top object-cover"
+              className="col-span-1 object-top object-contain w-full aspect-[9/16]"
               placeholder="blur"
               alt="screenshot"
             />
@@ -41,14 +41,14 @@ function ProjectCard(props: Props) {
     }
 
     return (
-      <div className="grid gap-8 sm:grid-cols-2">
+      <div className="grid gap-x-2 gap-y-8 sm:grid-cols-2">
         {displayedScreenshots.images.map((image, idx) => (
           <Image
             key={idx}
             src={image}
             width={1280}
             height={1080}
-            className="col-span-1 object-top object-cover"
+            className="col-span-1 object-top object-contain w-full aspect-[16/9]"
             placeholder="blur"
             alt="screenshot"
           />
