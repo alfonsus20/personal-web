@@ -68,10 +68,6 @@ personal-web/
 - Node.js 20.x or higher
 - npm, yarn, pnpm, or bun
 
-###Getting Started
-
-Need Node.js 20 or higher.
-
 1. Clone and install:
 ```bash
 git clone <repository-url>
