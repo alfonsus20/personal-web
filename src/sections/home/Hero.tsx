@@ -21,7 +21,7 @@ const Hero = () => {
         <div className="mb-7">
           <h2 className="font-semibold text-lg mb-4">
             Hi, I&apos;m Alfonsus Avianto 👋
-          </h2>
+          <h1 className="font-bold text-5xl mb-5">Web Engineer</h1>
           <h1 className="font-bold text-5xl mb-5">Frontend Engineer</h1>
           <p className="text-lg">
             I&apos;m a frontend engineer with a passion for crafting intuitive
