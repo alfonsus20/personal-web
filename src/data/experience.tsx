@@ -21,6 +21,25 @@ import Latios2 from "@/assets/images/experience/traveloka/projects/latios/latios
 import Latios3 from "@/assets/images/experience/traveloka/projects/latios/latios-3.jpg";
 import Latios4 from "@/assets/images/experience/traveloka/projects/latios/latios-4.jpg";
 import Latios5 from "@/assets/images/experience/traveloka/projects/latios/latios-5.jpg";
+import LatiosDesktop1 from "@/assets/images/experience/traveloka/projects/latios/latios-desktop-1.png";
+import LatiosDesktop2 from "@/assets/images/experience/traveloka/projects/latios/latios-desktop-2.png";
+import LatiosDesktop3 from "@/assets/images/experience/traveloka/projects/latios/latios-desktop-3.png";
+import LatiosDesktop4 from "@/assets/images/experience/traveloka/projects/latios/latios-desktop-4.png";
+import LatiosDesktop5 from "@/assets/images/experience/traveloka/projects/latios/latios-desktop-5.png";
+import NachosDesktop1 from "@/assets/images/experience/traveloka/projects/nachos/nachos-desktop-1.png";
+import NachosDesktop2 from "@/assets/images/experience/traveloka/projects/nachos/nachos-desktop-2.png";
+import NachosDesktop3 from "@/assets/images/experience/traveloka/projects/nachos/nachos-desktop-3.png";
+import NachosDesktop4 from "@/assets/images/experience/traveloka/projects/nachos/nachos-desktop-4.png";
+import NachosDesktop5 from "@/assets/images/experience/traveloka/projects/nachos/nachos-desktop-5.png";
+import NachosDesktop6 from "@/assets/images/experience/traveloka/projects/nachos/nachos-desktop-6.png";
+import NachosDesktop7 from "@/assets/images/experience/traveloka/projects/nachos/nachos-desktop-7.png";
+import Nachos1 from "@/assets/images/experience/traveloka/projects/nachos/nachos-mobile-1.png";
+import Nachos2 from "@/assets/images/experience/traveloka/projects/nachos/nachos-mobile-2.png";
+import Nachos3 from "@/assets/images/experience/traveloka/projects/nachos/nachos-mobile-3.png";
+import Nachos4 from "@/assets/images/experience/traveloka/projects/nachos/nachos-mobile-4.png";
+import Nachos5 from "@/assets/images/experience/traveloka/projects/nachos/nachos-mobile-5.png";
+import Nachos6 from "@/assets/images/experience/traveloka/projects/nachos/nachos-mobile-6.png";
+import Nachos7 from "@/assets/images/experience/traveloka/projects/nachos/nachos-mobile-7.png";
 
 // McEasy
 import McEasyLogo from "@/assets/images/experience/mceasy/logo.webp";
@@ -152,7 +171,47 @@ const EXPERIENCE_DATA: ExperienceData[] = [
         name: "Preflight Report",
         screenshots: [
           {
+            images: [
+              LatiosDesktop1,
+              LatiosDesktop2,
+              LatiosDesktop3,
+              LatiosDesktop4,
+              LatiosDesktop5,
+            ],
+            interfaceType: "desktop",
+          },
+          {
             images: [Latios1, Latios2, Latios3, Latios4, Latios5],
+            interfaceType: "mobile",
+          },
+        ],
+      },
+
+      {
+        name: "Flight Name Correction",
+        screenshots: [
+          {
+            images: [
+              NachosDesktop1,
+              NachosDesktop2,
+              NachosDesktop3,
+              NachosDesktop4,
+              NachosDesktop5,
+              NachosDesktop6,
+              NachosDesktop7,
+            ],
+            interfaceType: "desktop",
+          },
+          {
+            images: [
+              Nachos1,
+              Nachos2,
+              Nachos3,
+              Nachos4,
+              Nachos5,
+              Nachos6,
+              Nachos7,
+            ],
             interfaceType: "mobile",
           },
         ],
