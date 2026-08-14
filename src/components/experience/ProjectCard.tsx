@@ -27,7 +27,7 @@ function ProjectCard(props: Props) {
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {displayedScreenshots.images.map((image, idx) => (
             <Image
-              key={idx}
+              key={`mobile-${idx}`}
               src={image}
               width={640}
               height={360}
@@ -44,7 +44,7 @@ function ProjectCard(props: Props) {
       <div className="grid gap-x-2 gap-y-8 sm:grid-cols-2">
         {displayedScreenshots.images.map((image, idx) => (
           <Image
-            key={idx}
+            key={`desktop-${idx}`}
             src={image}
             width={1280}
             height={1080}
